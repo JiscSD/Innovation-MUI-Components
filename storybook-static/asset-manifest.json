@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "./main.1459f8b7d059e1ade3e1.bundle.js",
+    "main.js.map": "./main.1459f8b7d059e1ade3e1.bundle.js.map",
+    "runtime~main.js": "./runtime~main.1459f8b7d059e1ade3e1.bundle.js",
+    "runtime~main.js.map": "./runtime~main.1459f8b7d059e1ade3e1.bundle.js.map",
+    "vendors~main.css": "./static/css/vendors~main.43a1c8b7.chunk.css",
+    "vendors~main.js": "./vendors~main.1459f8b7d059e1ade3e1.bundle.js",
+    "vendors~main.css.map": "./static/css/vendors~main.43a1c8b7.chunk.css.map",
+    "vendors~main.js.map": "./vendors~main.1459f8b7d059e1ade3e1.bundle.js.map",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.1f05e273de3d7d19845d2646077bffbf.js": "./precache-manifest.1f05e273de3d7d19845d2646077bffbf.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/index.css": "./static/media/roboto-latin-900italic.ebf6d164.woff2",
+    "vendors~main.1459f8b7d059e1ade3e1.bundle.js.LICENSE.txt": "./vendors~main.1459f8b7d059e1ade3e1.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.1459f8b7d059e1ade3e1.bundle.js",
+    "static/css/vendors~main.43a1c8b7.chunk.css",
+    "vendors~main.1459f8b7d059e1ade3e1.bundle.js",
+    "main.1459f8b7d059e1ade3e1.bundle.js"
+  ]
+}

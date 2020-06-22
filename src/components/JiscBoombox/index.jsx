@@ -2,27 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import theme from './../../theme.js';
 
-import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
+import {
+    makeStyles,
+    Typography,
+    Container,
+    ThemeProvider
+} from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import JiscButton from './../JiscButton';
 
 const breakpoints = createBreakpoints({});
 
-const useStyles = ({ backgroundColor, backgroundImage }) => makeStyles((theme) => ({
-    root: {
-        backgroundColor: backgroundColor || theme.palette.background.banner,
-        backgroundImage: `url(${backgroundImage})` || '',
-        padding: '3rem 12rem',
-        textAlign: 'center',
-        color: 'white'
-    },
-    text: {
-        margin: '1rem 0'
-    }
-}));
+const useStyles = ({ backgroundColor, backgroundImage }) =>
+    makeStyles((theme) => ({
+        root: {
+            backgroundColor: backgroundColor || theme.palette.background.banner,
+            backgroundImage: `url(${backgroundImage})` || '',
+            padding: '3rem 12rem',
+            textAlign: 'center',
+            color: 'white'
+        },
+        text: {
+            margin: '1rem 0'
+        }
+    }));
 
 const JiscBoombox = ({ title, content, backgroundColor, backgroundImage }) => {
-
     const classes = useStyles({ backgroundColor, backgroundImage })();
 
     return (
@@ -39,8 +44,6 @@ const JiscBoombox = ({ title, content, backgroundColor, backgroundImage }) => {
     );
 };
 
-
-
 JiscBoombox.propTypes = {
     title: PropTypes.string,
     backgroundColor: PropTypes.string,
@@ -48,11 +51,11 @@ JiscBoombox.propTypes = {
 };
 
 JiscBoombox.defaultProps = {
-    title: 'Jisc',
+    title: 'Jisc'
 };
 
 export default (props) => {
-    return(
+    return (
         <ThemeProvider theme={theme}>
             <JiscBoombox {...props} />
         </ThemeProvider>
