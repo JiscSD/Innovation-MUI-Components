@@ -34,11 +34,11 @@ const JiscImageBanner = ({ title, content, leftImage, rightImage }) => {
     return (
         <ThemeProvider theme={theme}>
             <Grid container className={classes.root}>
-                <Grid item lg={6} xs={12} className={classes.containerLeft}>
+                <Grid item md={6} xs={12} className={classes.containerLeft}>
                     <Typography variant='h2'>{title}</Typography>
                     <Typography variant='body1'>{content}</Typography>
                 </Grid>
-                <Grid item lg={6} className={classes.containerRight}>
+                <Grid item md={6} className={classes.containerRight}>
 
                 </Grid>
             </Grid>
