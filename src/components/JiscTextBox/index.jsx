@@ -26,21 +26,23 @@ const useStyles = makeStyles((theme) => ({
     'MuiContainer-maxWidthLg': {}
 }));
 
-const JiscTextBox = ({ paragraphs, imageUrl }) => {
+const JiscTextBox = ({ imageUrl, children, backgroundColor = 'white', color = 'black' }) => {
     const classes = useStyles();
 
     return (
         <ThemeProvider theme={theme}>
-            <Container maxWidth='md' className={classes.root}>
-                <Grid container>
-                    <Grid item md={12} lg={8} className={classes.marginAuto}>
-                        {paragraphs.map((paragraph) => (React.isValidElement(paragraph) ? paragraph : <Typography>{paragraph}</Typography>))}
+            <div style={{ backgroundColor, color }}>
+                <Container maxWidth='md' className={classes.root}>
+                    <Grid container>
+                        <Grid item md={12} lg={8} className={classes.marginAuto}>
+                            {children}
+                        </Grid>
+                        <Grid item lg={4} className={classes.marginAuto}>
+                            <img src={imageUrl} />
+                        </Grid>
                     </Grid>
-                    <Grid item lg={4} className={classes.marginAuto}>
-                        <img src={imageUrl} />
-                    </Grid>
-                </Grid>
-            </Container>
+                </Container>
+            </div>
         </ThemeProvider>
     );
 };

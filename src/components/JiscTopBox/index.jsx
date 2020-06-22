@@ -30,7 +30,7 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
         }
     }));
 
-const JiscImageBanner = ({ title, content, leftImage, rightImage, leftBackgroundColor, rightBackgroundColor }) => {
+const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, children }) => {
     const classes = useStyles({
         leftImage,
         rightImage,
@@ -42,8 +42,7 @@ const JiscImageBanner = ({ title, content, leftImage, rightImage, leftBackground
         <ThemeProvider theme={theme}>
             <Grid container className={classes.root}>
                 <Grid item md={6} xs={12} className={classes.containerLeft}>
-                    <Typography variant='h2'>{title}</Typography>
-                    <Typography variant='body1'>{content}</Typography>
+                    {children}
                 </Grid>
                 <Grid item md={6} className={classes.containerRight}></Grid>
             </Grid>
@@ -52,17 +51,10 @@ const JiscImageBanner = ({ title, content, leftImage, rightImage, leftBackground
 };
 
 JiscImageBanner.propTypes = {
-    title: PropTypes.string,
-    content: PropTypes.string,
     leftImage: PropTypes.string,
     leftBackgroundColor: PropTypes.string,
     rightImage: PropTypes.string,
     rightBackgroundColor: PropTypes.string
-};
-
-JiscImageBanner.defaultProps = {
-    title: 'Jisc',
-    content: 'Content goes here...'
 };
 
 export default (props) => {
