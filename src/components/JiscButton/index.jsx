@@ -9,8 +9,7 @@ const useStyles = ({ outline }) =>
         button: {
             color: outline === 'primary' ? theme.palette.primary.main : 'white',
             textPrimary: 'primary',
-            borderColor:
-                outline === 'primary' ? theme.palette.primary.main : 'white',
+            borderColor: outline === 'primary' ? theme.palette.primary.main : 'white',
             '&:hover': {
                 color: 'white',
                 borderColor: theme.palette.primary.main,
@@ -24,11 +23,7 @@ const JiscButton = (props) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Button
-                variant='outlined'
-                className={classes.button}
-                {...props}
-            ></Button>
+            <Button variant='outlined' className={classes.button} {...props}></Button>
         </ThemeProvider>
     );
 };

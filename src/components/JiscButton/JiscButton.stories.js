@@ -9,7 +9,13 @@ export default {
 };
 
 export const Button1 = () => (
-    <JiscButton outline='primary'>Click Me</JiscButton>
+    <div
+        style={{
+            padding: '4rem'
+        }}
+    >
+        <JiscButton outline='primary'>Click Me</JiscButton>
+    </div>
 );
 
 export const Button2 = () => (
@@ -25,4 +31,8 @@ export const Button2 = () => (
 
 Button1.story = {
     name: 'JiscButton1'
+};
+
+Button2.story = {
+    name: 'JiscButton2'
 };

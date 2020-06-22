@@ -7,10 +7,11 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 const breakpoints = createBreakpoints({});
 
-const useStyles = ({ leftImage, rightImage }) =>
+const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor }) =>
     makeStyles((theme) => ({
         containerLeft: {
-            backgroundImage: `url(${leftImage})`,
+            backgroundImage: leftImage && `url(${leftImage})`,
+            backgroundColor: leftBackgroundColor,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -21,15 +22,21 @@ const useStyles = ({ leftImage, rightImage }) =>
             }
         },
         containerRight: {
-            backgroundImage: `url(${rightImage})`,
+            backgroundImage: rightImage && `url(${rightImage})`,
+            backgroundColor: rightBackgroundColor,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover'
         }
     }));
 
-const JiscImageBanner = ({ title, content, leftImage, rightImage }) => {
-    const classes = useStyles({ leftImage, rightImage })();
+const JiscImageBanner = ({ title, content, leftImage, rightImage, leftBackgroundColor, rightBackgroundColor }) => {
+    const classes = useStyles({
+        leftImage,
+        rightImage,
+        leftBackgroundColor,
+        rightBackgroundColor
+    })();
 
     return (
         <ThemeProvider theme={theme}>
@@ -48,7 +55,9 @@ JiscImageBanner.propTypes = {
     title: PropTypes.string,
     content: PropTypes.string,
     leftImage: PropTypes.string,
-    rightImage: PropTypes.string
+    leftBackgroundColor: PropTypes.string,
+    rightImage: PropTypes.string,
+    rightBackgroundColor: PropTypes.string
 };
 
 JiscImageBanner.defaultProps = {
