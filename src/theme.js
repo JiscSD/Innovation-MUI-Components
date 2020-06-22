@@ -1,9 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import roboto from 'typeface-roboto';
 
 const breakpoints = createBreakpoints({});
-
 
 const theme = createMuiTheme({
     palette: {
