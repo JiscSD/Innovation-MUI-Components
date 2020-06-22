@@ -1,5 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
+import roboto from 'typeface-roboto';
 
 const breakpoints = createBreakpoints({});
 
@@ -63,6 +64,7 @@ const theme = createMuiTheme({
         MuiTypography: {
             h1: {
                 fontSize: '2.5rem',
+                fontWeight: '200',
                 [breakpoints.up('sm')]: {
                     fontSize: '3rem'
                 },
@@ -72,7 +74,7 @@ const theme = createMuiTheme({
             },
             h2: {
                 fontSize: '3.6rem',
-                fontWeight: '400',
+                fontWeight: '200',
                 // lineHeight: '4rem',
                 [breakpoints.up('sm')]: {
                     fontSize: '2.25rem'
@@ -83,7 +85,7 @@ const theme = createMuiTheme({
             },
             h3: {
                 fontSize: '1.5rem',
-                fontWeight: '400',
+                fontWeight: '200',
                 [breakpoints.up('sm')]: {
                     fontSize: '1.75rem'
                 },
@@ -93,7 +95,7 @@ const theme = createMuiTheme({
             },
             h4: {
                 fontSize: '1.25rem',
-                fontWeight: '400',
+                fontWeight: '200',
                 [breakpoints.up('md')]: {
                     fontSize: '1.5rem'
                 }
@@ -109,9 +111,9 @@ const theme = createMuiTheme({
             },
             body1: {
                 fontSize: '1.3rem',
-                fontWeight: '300',
+                fontWeight: '200',
                 '& strong': {
-                    fontWeight: 400
+                    fontWeight: '400'
                 }
             },
             body2: {

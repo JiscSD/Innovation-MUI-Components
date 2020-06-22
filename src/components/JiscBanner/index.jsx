@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import theme from './../../theme.js';
 
-import {
-    makeStyles,
-    Typography,
-    Container,
-    ThemeProvider
-} from '@material-ui/core';
+import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import JiscLogo from './../JiscLogo';
 
@@ -15,7 +10,7 @@ const breakpoints = createBreakpoints({});
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: theme.palette.background.banner,
+        backgroundColor: theme.palette.background.default,
         paddingTop: theme.spacing(1),
         [breakpoints.up('sm')]: {
             height: '55px',
@@ -40,8 +35,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'row'
     },
     text: {
-        color: '#fff',
-        fontWeight: 400,
+        color: theme.palette.background.banner,
         marginLeft: theme.spacing(2),
         [breakpoints.up('sm')]: {
             marginLeft: theme.spacing(3)
@@ -58,7 +52,7 @@ const JiscBanner = ({ title }) => {
                 <Container className={classes.container}>
                     <div className={classes.leftItems}>
                         <JiscLogo />
-                        <Typography variant='body1' className={classes.text}>
+                        <Typography variant='body2' className={classes.text}>
                             {title}
                         </Typography>
                     </div>
