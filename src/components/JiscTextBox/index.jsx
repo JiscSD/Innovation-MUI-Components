@@ -8,6 +8,10 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 const breakpoints = createBreakpoints({});
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        marginTop: '2rem',
+        marginBottom: '2rem'
+    },
     gridContainer: {
         padding: '3rem 0'
     },
@@ -27,10 +31,10 @@ const JiscTextBox = ({ paragraphs, imageUrl }) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Container maxWidth='md'>
+            <Container maxWidth='md' className={classes.root}>
                 <Grid container>
                     <Grid item md={12} lg={8} className={classes.marginAuto}>
-                        {paragraphs.map((paragraph) => (React.isValidElement(paragraph) ? paragraph : <Typography style={{ margin: '1rem 0rem' }}>{paragraph}</Typography>))}
+                        {paragraphs.map((paragraph) => (React.isValidElement(paragraph) ? paragraph : <Typography>{paragraph}</Typography>))}
                     </Grid>
                     <Grid item lg={4} className={classes.marginAuto}>
                         <img src={imageUrl} />

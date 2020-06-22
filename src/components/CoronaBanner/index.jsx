@@ -45,7 +45,7 @@ const CoronaBanner = () => {
     return (
         <div className={classes.root}>
             <Container className={classes.container}>
-                <Typography variant='body1' className={classes.text}>
+                <Typography variant='body2' className={classes.text}>
                     <Link className={classes.coronaLink} href='https://www.jisc.ac.uk/coronavirus'>
                         Coronavirus (COVID-19) advice and information for our members
                     </Link>
