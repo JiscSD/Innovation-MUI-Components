@@ -11,30 +11,28 @@ const useStyles = ({ backgroundColor, color }) =>
             backgroundColor: theme.palette.jisc[backgroundColor] || 'white',
             color: theme.palette.jisc[color] || 'black'
         },
-        gridContainer: {
-            padding: '3rem 0'
-        },
-        gridContainerGrey: {
-            padding: '3rem 0'
-        },
         marginAuto: {
             margin: 'auto'
+        },
+        image: {
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
         }
     }));
 
-const JiscTextBox = ({ imageUrl, children, backgroundColor, color }) => {
+const JiscTextBox = ({ imageUrl, children, backgroundColor, color, imagePosition = 'right' }) => {
     const classes = useStyles({ backgroundColor, color })();
-
     return (
         <ThemeProvider theme={jiscTheme}>
             <div className={classes.root}>
                 <Container maxWidth='md'>
-                    <Grid container>
+                    <Grid container direction={imagePosition === 'right' ? 'row' : 'row-reverse'}>
                         <Grid item md={12} lg={8} className={classes.marginAuto}>
                             {children}
                         </Grid>
                         <Grid item lg={4} className={classes.marginAuto}>
-                            <img src={imageUrl} alt='text box' />
+                            <img src={imageUrl} className={classes.image} alt='text box' />
                         </Grid>
                     </Grid>
                 </Container>
