@@ -3,32 +3,32 @@ import { makeStyles, ThemeProvider, Grid, Container } from '@material-ui/core';
 
 import jiscTheme from '../../theme';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        marginTop: '2rem',
-        marginBottom: '2rem'
-    },
-    gridContainer: {
-        padding: '3rem 0'
-    },
-    gridContainerGrey: {
-        backgroundColor: theme.palette.background.banner,
-        color: 'white',
-        padding: '3rem 0'
-    },
-    marginAuto: {
-        margin: 'auto'
-    },
-    'MuiContainer-maxWidthLg': {}
-}));
+const useStyles = ({ backgroundColor, color }) =>
+    makeStyles((theme) => ({
+        root: {
+            marginTop: '2rem',
+            marginBottom: '2rem',
+            backgroundColor: theme.palette.jisc[backgroundColor] || 'white',
+            color: theme.palette.jisc[color] || 'black'
+        },
+        gridContainer: {
+            padding: '3rem 0'
+        },
+        gridContainerGrey: {
+            padding: '3rem 0'
+        },
+        marginAuto: {
+            margin: 'auto'
+        }
+    }));
 
-const JiscTextBox = ({ imageUrl, children, backgroundColor = 'white', color = 'black' }) => {
-    const classes = useStyles();
+const JiscTextBox = ({ imageUrl, children, backgroundColor, color }) => {
+    const classes = useStyles({ backgroundColor, color })();
 
     return (
         <ThemeProvider theme={jiscTheme}>
-            <div style={{ backgroundColor, color }}>
-                <Container maxWidth='md' className={classes.root}>
+            <div className={classes.root}>
+                <Container maxWidth='md'>
                     <Grid container>
                         <Grid item md={12} lg={8} className={classes.marginAuto}>
                             {children}
