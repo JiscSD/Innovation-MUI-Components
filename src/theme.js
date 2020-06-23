@@ -24,6 +24,26 @@ const theme = createMuiTheme({
         },
         success: {
             main: '#4caf50'
+        },
+        jisc: {
+            orange: '#e85e13',
+            darkOrange: '#9f3515',
+            pink: '#e61554',
+            yellow: '#f9b000',
+            lime: '#b2bb1c',
+            blue: '#0092cb',
+            violet: '#b71a8b',
+            maroon: '#820036',
+            olive: '#8a7300',
+            green: '#458525',
+            indigo: '#00557f',
+            purple: '#552481',
+            textGrey: '#2c3841',
+            supportText: '#525e67',
+            darkGrey: '#9ba7b0',
+            midGrey: '#b9c9d5',
+            lightGrey: '#cadfb0',
+            additionalGrey: '#fafafa'
         }
     },
 
