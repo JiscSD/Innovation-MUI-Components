@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import theme from './../../theme.js';
-
 import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import JiscLogo from './../JiscLogo';
+
+import jiscTheme from '../../theme';
+import JiscLogo from '../JiscLogo';
 
 const breakpoints = createBreakpoints({});
 
@@ -47,18 +47,16 @@ const JiscBanner = ({ title }) => {
     const classes = useStyles();
 
     return (
-        <ThemeProvider theme={theme}>
-            <div className={classes.root}>
-                <Container className={classes.container}>
-                    <div className={classes.leftItems}>
-                        <JiscLogo />
-                        <Typography variant='body2' className={classes.text}>
-                            {title}
-                        </Typography>
-                    </div>
-                </Container>
-            </div>
-        </ThemeProvider>
+        <div className={classes.root}>
+            <Container className={classes.container}>
+                <div className={classes.leftItems}>
+                    <JiscLogo />
+                    <Typography variant='body2' className={classes.text}>
+                        {title}
+                    </Typography>
+                </div>
+            </Container>
+        </div>
     );
 };
 
@@ -72,7 +70,7 @@ JiscBanner.defaultProps = {
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscBanner {...props} />
         </ThemeProvider>
     );

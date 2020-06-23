@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import theme from './../../theme.js';
-
 import { makeStyles, Button, ThemeProvider } from '@material-ui/core';
+
+import jiscTheme from '../../theme';
 
 const useStyles = ({ outline }) =>
     makeStyles((theme) => ({
@@ -21,16 +20,12 @@ const useStyles = ({ outline }) =>
 const JiscButton = (props) => {
     const classes = useStyles(props)();
 
-    return (
-        <ThemeProvider theme={theme}>
-            <Button variant='outlined' className={classes.button} {...props}></Button>
-        </ThemeProvider>
-    );
+    return <Button variant='outlined' className={classes.button} {...props} />;
 };
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscButton {...props} />
         </ThemeProvider>
     );

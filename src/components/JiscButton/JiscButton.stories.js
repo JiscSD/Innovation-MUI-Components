@@ -1,6 +1,6 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscButton from './index.jsx';
+import JiscButton from './index';
 
 export default {
     title: 'JiscButton',

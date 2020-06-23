@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Typography, Container, Link, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import theme from './../../theme.js';
+import jiscTheme from '../../theme';
 
 const breakpoints = createBreakpoints({});
 
@@ -57,7 +57,7 @@ const CoronaBanner = () => {
 
 export default () => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <CoronaBanner />
         </ThemeProvider>
     );

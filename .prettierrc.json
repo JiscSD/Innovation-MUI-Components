@@ -9,5 +9,5 @@
     "arrowParens": "always",
     "quoteProps": "as-needed",
     "jsxSingleQuote": true,
-    "printWidth": 1000
+    "printWidth": 120
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import CoronaBanner from './index.jsx';
+import CoronaBanner from './index';
 
 export default {
     title: 'CoronaBanner',

@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import theme from './../../theme.js';
+import { makeStyles, ThemeProvider } from '@material-ui/core';
 
-import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-
-const breakpoints = createBreakpoints({});
+import jiscTheme from '../../theme';
 
 const useStyles = ({ backgroundColor, backgroundImage }) =>
     makeStyles((theme) => ({
@@ -24,21 +21,18 @@ const useStyles = ({ backgroundColor, backgroundImage }) =>
 const JiscBoombox = ({ backgroundColor, backgroundImage, children }) => {
     const classes = useStyles({ backgroundColor, backgroundImage })();
 
-    return (
-        <ThemeProvider theme={theme}>
-            <div className={classes.root}>{children}</div>
-        </ThemeProvider>
-    );
+    return <div className={classes.root}>{children}</div>;
 };
 
 JiscBoombox.propTypes = {
     backgroundColor: PropTypes.string,
-    backgroundImage: PropTypes.string
+    backgroundImage: PropTypes.string,
+    children: PropTypes.node
 };
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscBoombox {...props} />
         </ThemeProvider>
     );

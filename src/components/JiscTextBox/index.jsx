@@ -1,11 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import theme from '../../theme.js';
+import { makeStyles, ThemeProvider, Grid, Container } from '@material-ui/core';
 
-import { makeStyles, Typography, ThemeProvider, Grid, Container, Link } from '@material-ui/core';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-
-const breakpoints = createBreakpoints({});
+import jiscTheme from '../../theme';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,7 +26,7 @@ const JiscTextBox = ({ imageUrl, children, backgroundColor = 'white', color = 'b
     const classes = useStyles();
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <div style={{ backgroundColor, color }}>
                 <Container maxWidth='md' className={classes.root}>
                     <Grid container>
@@ -38,7 +34,7 @@ const JiscTextBox = ({ imageUrl, children, backgroundColor = 'white', color = 'b
                             {children}
                         </Grid>
                         <Grid item lg={4} className={classes.marginAuto}>
-                            <img src={imageUrl} />
+                            <img src={imageUrl} alt='text box' />
                         </Grid>
                     </Grid>
                 </Container>
@@ -49,7 +45,7 @@ const JiscTextBox = ({ imageUrl, children, backgroundColor = 'white', color = 'b
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscTextBox {...props} />
         </ThemeProvider>
     );
