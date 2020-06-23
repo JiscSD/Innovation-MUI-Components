@@ -31,36 +31,38 @@ const theme = createMuiTheme({
         fontFamily: 'Roboto',
         color: '#2c3841'
     },
-    link: {
-        textDecoration: 'underline',
-        color: '#007aaa',
-        border: '0',
-        '&:hover': {
-            color: '#ae460e',
-            transition: 'color .2s ease',
-            cursor: 'pointer'
-        },
-        '&:focus': {
-            color: '#007aaa',
-            textDecoration: 'none',
-            backgroundColor: '#fd6',
-            outline: 'solid #fd6'
-        },
-        '&:focus:hover': {
-            color: '#007aaa',
-            textDecoration: 'underline',
-            backgroundColor: '#fd6',
-            outline: 'solid #fd6'
-        },
-        '&:active': {
-            color: '#007aaa',
-            textDecoration: 'underline',
-            backgroundColor: '#fd6',
-            outline: 'solid #fd6'
-        }
-    },
 
     overrides: {
+        MuiLink: {
+            root: {
+                textDecoration: 'underline !important',
+                color: '#007aaa',
+                border: '0',
+                '&:hover': {
+                    color: '#ae460e',
+                    transition: 'color .2s ease',
+                    cursor: 'pointer'
+                },
+                '&:focus': {
+                    color: '#007aaa',
+                    textDecoration: 'none',
+                    backgroundColor: '#fd6',
+                    outline: 'solid #fd6'
+                },
+                '&:focus:hover': {
+                    color: '#007aaa',
+                    textDecoration: 'underline',
+                    backgroundColor: '#fd6',
+                    outline: 'solid #fd6'
+                },
+                '&:active': {
+                    color: '#007aaa',
+                    textDecoration: 'underline',
+                    backgroundColor: '#fd6',
+                    outline: 'solid #fd6'
+                }
+            }
+        },
         MuiTypography: {
             h1: {
                 fontSize: '2.5rem',
