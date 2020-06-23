@@ -7,7 +7,7 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 const breakpoints = createBreakpoints({});
 
-const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor }) =>
+const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, color }) =>
     makeStyles((theme) => ({
         containerLeft: {
             backgroundImage: leftImage && `url(${leftImage})`,
@@ -35,7 +35,8 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
         leftImage,
         rightImage,
         leftBackgroundColor,
-        rightBackgroundColor
+        rightBackgroundColor,
+        color
     })();
 
     return (

@@ -33,10 +33,13 @@ export const Boombox2 = () => (
     </JiscBoombox>
 );
 
-Boombox1.story = {
-    name: 'JiscBoombox1'
-};
-
-Boombox2.story = {
-    name: 'JiscBoombox2'
-};
+export const Boombox3 = () => (
+    <JiscBoombox backgroundColor='orange'>
+        <Typography variant='h2'>Jisc Boombox Example 3</Typography>
+        <Typography>
+            Join our three-day online event and explore how to elevate the student experience during this challenging
+            time
+        </Typography>
+        <JiscButton style={{ marginTop: jiscTheme.spacing(3) }}>Click Here</JiscButton>
+    </JiscBoombox>
+);

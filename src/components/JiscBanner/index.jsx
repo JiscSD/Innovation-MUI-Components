@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
-import jiscTheme from '../../theme';
+import theme from '../../theme';
 import JiscLogo from '../JiscLogo';
 
 const breakpoints = createBreakpoints({});
@@ -70,7 +70,7 @@ JiscBanner.defaultProps = {
 
 export default (props) => {
     return (
-        <ThemeProvider theme={jiscTheme}>
+        <ThemeProvider theme={theme}>
             <JiscBanner {...props} />
         </ThemeProvider>
     );

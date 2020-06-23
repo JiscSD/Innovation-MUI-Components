@@ -2,24 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, ThemeProvider } from '@material-ui/core';
 
-import jiscTheme from '../../theme';
+import theme from '../../theme';
 
-const useStyles = ({ backgroundColor, backgroundImage }) =>
+const useStyles = ({ backgroundColor, backgroundImage, color }) =>
     makeStyles((theme) => ({
         root: {
-            backgroundColor: backgroundColor || theme.palette.background.banner,
+            backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.background.banner,
             backgroundImage: `url(${backgroundImage})` || '',
             padding: '3rem 12rem',
             textAlign: 'center',
-            color: 'white'
+            color: theme.palette.jisc[color] || 'white'
         },
         text: {
             margin: '1rem 0'
         }
     }));
 
-const JiscBoombox = ({ backgroundColor, backgroundImage, children }) => {
-    const classes = useStyles({ backgroundColor, backgroundImage })();
+const JiscBoombox = ({ backgroundColor, color, backgroundImage, children }) => {
+    const classes = useStyles({ backgroundColor, backgroundImage, color })();
 
     return <div className={classes.root}>{children}</div>;
 };
@@ -32,7 +32,7 @@ JiscBoombox.propTypes = {
 
 export default (props) => {
     return (
-        <ThemeProvider theme={jiscTheme}>
+        <ThemeProvider theme={theme}>
             <JiscBoombox {...props} />
         </ThemeProvider>
     );

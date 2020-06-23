@@ -10,12 +10,28 @@ export default {
 };
 
 export const TopBox1 = () => (
-    <JiscTopBox leftImage='https://www.jisc.ac.uk/sites/default/files/node-transparent-8d1558.png' rightImage='https://www.jisc.ac.uk/sites/default/files/connectivity-hero.jpg'>
+    <JiscTopBox
+        leftImage='https://www.jisc.ac.uk/sites/default/files/node-transparent-8d1558.png'
+        rightImage='https://www.jisc.ac.uk/sites/default/files/connectivity-hero.jpg'
+    >
         <Typography variant='h2'>Cyber security</Typography>
-        <Typography>To help you get the most from your Jisc membership, we work to protect the Janet Network and connected organisations</Typography>
+        <Typography>
+            To help you get the most from your Jisc membership, we work to protect the Janet Network and connected
+            organisations
+        </Typography>
     </JiscTopBox>
 );
 
-TopBox1.story = {
-    name: 'JiscTopBox1'
-};
+export const TopBox2 = () => (
+    <JiscTopBox
+        leftBackgroundColor='white'
+        color='blue'
+        rightImage='https://innovation-components-images.s3-eu-west-1.amazonaws.com/abstract/analytics-abstract-inform.jpg'
+    >
+        <Typography variant='h2'>Cyber security</Typography>
+        <Typography>
+            To help you get the most from your Jisc membership, we work to protect the Janet Network and connected
+            organisations
+        </Typography>
+    </JiscTopBox>
+);
