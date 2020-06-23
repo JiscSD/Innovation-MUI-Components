@@ -5,7 +5,7 @@ import JiscBanner from './components/JiscBanner';
 import JiscBoombox from './components/JiscBoombox';
 import JiscButton from './components/JiscButton';
 import JiscLogo from './components/JiscLogo';
-import JiscTextBox from './components/JiscTextBox';
+import JiscInfoBox from './components/JiscInfoBox';
 import JiscTopBox from './components/JiscTopBox';
 
-export { theme, CoronaBanner, JiscBanner, JiscBoombox, JiscButton, JiscLogo, JiscTextBox, JiscTopBox };
+export { theme, CoronaBanner, JiscBanner, JiscBoombox, JiscButton, JiscLogo, JiscInfoBox, JiscTopBox };

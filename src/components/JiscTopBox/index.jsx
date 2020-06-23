@@ -11,11 +11,11 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
     makeStyles((theme) => ({
         containerLeft: {
             backgroundImage: leftImage && `url(${leftImage})`,
-            backgroundColor: leftBackgroundColor,
+            backgroundColor: theme.palette.jisc[leftBackgroundColor],
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            color: 'white',
+            color: theme.palette.jisc[color] || 'white',
             padding: '10rem 8rem',
             [breakpoints.down('xs')]: {
                 padding: '1rem'
@@ -23,14 +23,14 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
         },
         containerRight: {
             backgroundImage: rightImage && `url(${rightImage})`,
-            backgroundColor: rightBackgroundColor,
+            backgroundColor: theme.palette.jisc[rightBackgroundColor],
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover'
         }
     }));
 
-const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, children }) => {
+const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, color, children }) => {
     const classes = useStyles({
         leftImage,
         rightImage,
