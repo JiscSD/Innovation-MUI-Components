@@ -21,7 +21,7 @@ const useStyles = ({ backgroundColor, color }) =>
         }
     }));
 
-const JiscTextBox = ({ imageUrl, children, backgroundColor, color, imagePosition = 'right' }) => {
+const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition = 'right' }) => {
     const classes = useStyles({ backgroundColor, color })();
     return (
         <ThemeProvider theme={jiscTheme}>
@@ -44,7 +44,7 @@ const JiscTextBox = ({ imageUrl, children, backgroundColor, color, imagePosition
 export default (props) => {
     return (
         <ThemeProvider theme={jiscTheme}>
-            <JiscTextBox {...props} />
+            <JiscInfoBox {...props} />
         </ThemeProvider>
     );
 };

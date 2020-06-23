@@ -1,16 +1,16 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { Typography, Link } from '@material-ui/core';
-import JiscTextBox from './index';
+import JiscInfoBox from './index';
 
 export default {
-    title: 'JiscTextBox',
+    title: 'JiscInfoBox',
     decorators: [withA11y],
-    component: JiscTextBox
+    component: JiscInfoBox
 };
 
-export const TextBox1 = () => (
-    <JiscTextBox imageUrl='https://www.jisc.ac.uk/sites/default/files/two-connected-workers-jisc-homepage_0.png'>
+export const InfoBox1 = () => (
+    <JiscInfoBox imageUrl='https://www.jisc.ac.uk/sites/default/files/two-connected-workers-jisc-homepage_0.png'>
         <Typography variant='h2'>Title</Typography>
         <Typography>
             We know that digital technology has the ability to transform education and research and are here to help you
@@ -21,15 +21,15 @@ export const TextBox1 = () => (
             and secure Janet Network, significant savings on content and expert advice and guidance on digital
             technology for the sector.
         </Typography>
-    </JiscTextBox>
+    </JiscInfoBox>
 );
 
-TextBox1.story = {
-    name: 'JiscTextBox default'
+InfoBox1.story = {
+    name: 'JiscInfoBox default'
 };
 
-export const TextBox2 = () => (
-    <JiscTextBox
+export const InfoBox2 = () => (
+    <JiscInfoBox
         imageUrl='https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
         color='darkOrange'
         backgroundColor='white'
@@ -44,14 +44,14 @@ export const TextBox2 = () => (
             and secure Janet Network, significant savings on content and expert advice and guidance on digital
             technology for the sector.
         </Typography>
-    </JiscTextBox>
+    </JiscInfoBox>
 );
-TextBox2.story = {
-    name: 'JiscTextBox non-default colours'
+InfoBox2.story = {
+    name: 'JiscInfoBox non-default colours'
 };
 
-export const TextBox3 = () => (
-    <JiscTextBox
+export const InfoBox3 = () => (
+    <JiscInfoBox
         imageUrl='https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
         imagePosition='left'
     >
@@ -65,9 +65,9 @@ export const TextBox3 = () => (
             and secure Janet Network, significant savings on content and expert advice and guidance on digital
             technology for the sector.
         </Typography>
-    </JiscTextBox>
+    </JiscInfoBox>
 );
 
-TextBox3.story = {
-    name: 'JiscTextBox left image'
+InfoBox3.story = {
+    name: 'JiscInfoBox left image'
 };
