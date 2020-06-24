@@ -134,7 +134,6 @@ const theme = createMuiTheme({
                 fontSize: '1rem'
             },
             body1: {
-                marginTop: '2rem',
                 fontSize: '1.3rem',
                 fontWeight: '200',
                 '& strong': {

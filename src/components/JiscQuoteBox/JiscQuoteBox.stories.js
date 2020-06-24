@@ -9,14 +9,6 @@ export default {
     component: JiscQuoteBox
 };
 
-export const QuoteBox1 = () => (
-    <JiscQuoteBox>
-        <Typography variant='h2'>Hello, this is the first Jisc Quote Box with default colors</Typography>
-    </JiscQuoteBox>
-);
+export const QuoteBox1 = () => <JiscQuoteBox text='Hello, this is the first Jisc Quote Box with default colors' />;
 
-export const QuoteBox2 = () => (
-    <JiscQuoteBox color='blue'>
-        <Typography variant='h2'>Hello, and welcome to the Jisc Quote Box 2</Typography>
-    </JiscQuoteBox>
-);
+export const QuoteBox2 = () => <JiscQuoteBox color='blue' text='Hello, and welcome to the Jisc Quote Box 2' />;

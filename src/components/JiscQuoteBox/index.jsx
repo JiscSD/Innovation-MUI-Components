@@ -13,12 +13,14 @@ const useStyles = ({ color }) =>
         }
     }));
 
-const JiscQuoteBox = ({ color, children }) => {
+const JiscQuoteBox = ({ color, text }) => {
     const classes = useStyles({ color })();
     return (
         <ThemeProvider theme={jiscTheme}>
             <Container maxWidth='md' className={classes.root}>
-                {children}
+                <Typography component='p' variant='h3'>
+                    {text}
+                </Typography>
             </Container>
         </ThemeProvider>
     );
