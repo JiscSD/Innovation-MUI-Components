@@ -23,7 +23,6 @@ const useStyles = ({ backgroundColor, color }) =>
 
 const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition = 'right' }) => {
     const classes = useStyles({ backgroundColor, color })();
-    const paddingClassname = imagePosition === 'right' ? 'imageRight' : 'imageLeft';
     return (
         <div className={classes.root}>
             <Container maxWidth='md'>
