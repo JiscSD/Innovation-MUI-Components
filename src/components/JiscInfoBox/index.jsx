@@ -8,7 +8,7 @@ const useStyles = ({ backgroundColor, color }) =>
         root: {
             marginTop: '2rem',
             marginBottom: '2rem',
-            backgroundColor: theme.palette.jisc[backgroundColor] || 'white',
+            backgroundColor: theme.palette.jisc[backgroundColor] || 'transparent',
             color: theme.palette.jisc[color] || 'black'
         },
         marginAuto: {

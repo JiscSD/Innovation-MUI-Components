@@ -54,6 +54,8 @@ export const InfoBox3 = () => (
     <JiscInfoBox
         imageUrl='https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
         imagePosition='left'
+        backgroundColor='blue'
+        color='white'
     >
         <Typography>
             We know that digital technology has the ability to transform education and research and are here to help you

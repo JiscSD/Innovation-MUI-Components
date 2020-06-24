@@ -11,8 +11,8 @@ export default {
 
 export const FeatureBox1 = () => (
     <JiscFeatureBox
-        backgroundImage='https://innovation-components-images.s3-eu-west-1.amazonaws.com/people/affordable_end_user_security_testing_1.jpg'
-        backgroundColor='pink'
+        backgroundImage='https://innovation-components-images.s3-eu-west-1.amazonaws.com/landscape/credit_card_inform.jpg'
+        backgroundColor='blue'
         color='white'
         imageHeight='400px'
     >
