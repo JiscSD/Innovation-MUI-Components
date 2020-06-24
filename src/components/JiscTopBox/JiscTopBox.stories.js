@@ -1,7 +1,8 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscTopBox from './index.jsx';
 import { Typography } from '@material-ui/core';
+
+import JiscTopBox from './index';
 
 export default {
     title: 'JiscTopBox',
