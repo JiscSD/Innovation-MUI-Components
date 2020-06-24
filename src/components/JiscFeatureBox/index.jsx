@@ -4,7 +4,6 @@ import { makeStyles, ThemeProvider, Grid } from '@material-ui/core';
 import jiscTheme from '../../theme';
 
 const hexToRgb = (hex) => {
-    console.log(hex);
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
         ? {
@@ -15,7 +14,7 @@ const hexToRgb = (hex) => {
         : null;
 };
 
-const useStyles = ({ backgroundImage, backgroundColor, color }) => {
+const useStyles = ({ backgroundImage, backgroundColor, color, imageHeight = '500px' }) => {
     return makeStyles((theme) => {
         const rgb = hexToRgb(theme.palette.jisc[backgroundColor]);
         return {
@@ -26,7 +25,7 @@ const useStyles = ({ backgroundImage, backgroundColor, color }) => {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                height: '500px'
+                height: imageHeight
             },
             textContainer: {
                 backgroundColor: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.85)`,
@@ -37,8 +36,8 @@ const useStyles = ({ backgroundImage, backgroundColor, color }) => {
     });
 };
 
-const JiscFeatureBox = ({ backgroundImage, backgroundColor, color, children }) => {
-    const classes = useStyles({ backgroundImage, backgroundColor, color })();
+const JiscFeatureBox = ({ backgroundImage, backgroundColor, color, imageHeight, children }) => {
+    const classes = useStyles({ backgroundImage, backgroundColor, imageHeight, color })();
     return (
         <Grid container direction='column' justify='flex-end' alignItems='flex-end' className={classes.imageContainer}>
             <Grid item className={classes.textContainer}>

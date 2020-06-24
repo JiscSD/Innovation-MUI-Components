@@ -14,6 +14,7 @@ export const FeatureBox1 = () => (
         backgroundImage='https://innovation-components-images.s3-eu-west-1.amazonaws.com/people/affordable_end_user_security_testing_1.jpg'
         backgroundColor='pink'
         color='white'
+        imageHeight='400px'
     >
         <Typography variant='h2'>Four steps to better online delivery: the South West College story</Typography>
     </JiscFeatureBox>
