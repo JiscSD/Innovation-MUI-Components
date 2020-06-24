@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import theme from '../../theme.js';
-
-import { makeStyles, Typography, ThemeProvider, Grid } from '@material-ui/core';
+import { makeStyles, ThemeProvider, Grid } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
+
+import jiscTheme from '../../theme';
 
 const breakpoints = createBreakpoints({});
 
@@ -40,14 +40,12 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
     })();
 
     return (
-        <ThemeProvider theme={theme}>
-            <Grid container className={classes.root}>
-                <Grid item md={6} xs={12} className={classes.containerLeft}>
-                    {children}
-                </Grid>
-                <Grid item md={6} className={classes.containerRight}></Grid>
+        <Grid container className={classes.root}>
+            <Grid item md={6} xs={12} className={classes.containerLeft}>
+                {children}
             </Grid>
-        </ThemeProvider>
+            <Grid item md={6} className={classes.containerRight} />
+        </Grid>
     );
 };
 
@@ -60,7 +58,7 @@ JiscImageBanner.propTypes = {
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscImageBanner {...props} />
         </ThemeProvider>
     );
