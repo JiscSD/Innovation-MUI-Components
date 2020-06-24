@@ -55,7 +55,6 @@ export const InfoBox3 = () => (
         imageUrl='https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
         imagePosition='left'
     >
-        <Typography variant='h2'>Title</Typography>
         <Typography>
             We know that digital technology has the ability to transform education and research and are here to help you
             every step of the way.

@@ -18,12 +18,6 @@ const useStyles = ({ backgroundColor, color }) =>
             width: '100%',
             height: '100%',
             objectFit: 'cover'
-        },
-        imageLeft: {
-            paddingRight: theme.spacing(2)
-        },
-        imageRight: {
-            paddingLeft: theme.spacing(2)
         }
     }));
 
@@ -31,20 +25,18 @@ const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition
     const classes = useStyles({ backgroundColor, color })();
     const paddingClassname = imagePosition === 'right' ? 'imageRight' : 'imageLeft';
     return (
-        <ThemeProvider theme={jiscTheme}>
-            <div className={classes.root}>
-                <Container maxWidth='md'>
-                    <Grid container direction={imagePosition === 'right' ? 'row' : 'row-reverse'}>
-                        <Grid item md={12} lg={8} className={classes.marginAuto}>
-                            {children}
-                        </Grid>
-                        <Grid item lg={4} className={`${classes.marginAuto} ${classes[paddingClassname]}`}>
-                            <img src={imageUrl} className={classes.image} alt='text box' />
-                        </Grid>
+        <div className={classes.root}>
+            <Container maxWidth='md'>
+                <Grid container spacing={8} direction={imagePosition === 'right' ? 'row' : 'row-reverse'}>
+                    <Grid item md={12} lg={8} className={classes.marginAuto}>
+                        {children}
                     </Grid>
-                </Container>
-            </div>
-        </ThemeProvider>
+                    <Grid item lg={4} className={classes.marginAuto}>
+                        <img src={imageUrl} className={classes.image} alt='text box' />
+                    </Grid>
+                </Grid>
+            </Container>
+        </div>
     );
 };
 
