@@ -1,6 +1,6 @@
 {
     "name": "jisc-innovation-mui-components",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "main": "dist/",
     "private": false,
     "dependencies": {
@@ -26,7 +26,7 @@
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 9009 -s public",
         "build-storybook": "build-storybook -s public",
-        "publish:npm": "rm -rf dist && mkdir dist && node scripts/generateIndex.js && babel src/ -d dist --copy-files"
+        "publish:npm": "rm -rf dist && mkdir dist && node scripts/generateIndex.js && babel src/ -d dist --copy-files && npm publish"
     },
     "eslintConfig": {
         "extends": "react-app"
