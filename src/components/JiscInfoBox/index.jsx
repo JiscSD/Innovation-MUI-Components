@@ -6,8 +6,8 @@ import jiscTheme from '../../theme';
 const useStyles = ({ backgroundColor, color }) =>
     makeStyles((theme) => ({
         root: {
-            marginTop: '2rem',
-            marginBottom: '2rem',
+            marginTop: theme.spacing(3),
+            marginBottom: theme.spacing(3),
             backgroundColor: theme.palette.jisc[backgroundColor] || 'transparent',
             color: theme.palette.jisc[color] || 'black'
         },

@@ -10,10 +10,8 @@ const useStyles = ({ backgroundColor, color }) =>
     makeStyles((theme) => ({
         root: {
             backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.jisc.orange,
-            // paddingTop: theme.spacing(1),
             [breakpoints.up('sm')]: {
                 height: '75px',
-                // paddingTop: 0,
                 alignItems: 'center'
             }
         },

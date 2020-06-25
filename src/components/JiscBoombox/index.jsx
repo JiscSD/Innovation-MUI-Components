@@ -9,12 +9,9 @@ const useStyles = ({ backgroundColor, backgroundImage, color }) =>
         root: {
             backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.background.banner,
             backgroundImage: `url(${backgroundImage})` || '',
-            padding: '3rem 12rem',
+            padding: theme.spacing(8),
             textAlign: 'center',
             color: theme.palette.jisc[color] || 'white'
-        },
-        text: {
-            margin: '1rem 0'
         }
     }));
 
