@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const CoronaBanner = () => {
+const JiscCoronaBanner = () => {
     const classes = useStyles();
 
     return (
@@ -58,7 +58,7 @@ const CoronaBanner = () => {
 export default () => {
     return (
         <ThemeProvider theme={jiscTheme}>
-            <CoronaBanner />
+            <JiscCoronaBanner />
         </ThemeProvider>
     );
 };
