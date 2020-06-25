@@ -33,7 +33,7 @@ export const Boombox2 = () => (
             time
         </Typography>
         <br />
-        <JiscButton style={{ marginTop: jiscTheme.spacing(3) }}>Click Here</JiscButton>
+        <JiscButton>Click Here</JiscButton>
     </JiscBoombox>
 );
 

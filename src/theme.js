@@ -141,7 +141,6 @@ const theme = createMuiTheme({
                 }
             },
             h6: {
-                color: '#2c3841',
                 fontSize: '1rem'
             },
             body1: {
