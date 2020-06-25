@@ -55,6 +55,17 @@ const theme = createMuiTheme({
     },
 
     overrides: {
+        MuiTabs: {
+            root: {
+                color: 'white',
+                backgroundColor: '#3c525f'
+            }
+        },
+        MuiTab: {
+            root: {
+                color: 'white'
+            }
+        },
         MuiLink: {
             root: {
                 textDecoration: 'underline !important',
