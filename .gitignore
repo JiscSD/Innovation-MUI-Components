@@ -24,4 +24,4 @@ yarn-error.log*
 
 public
 storybook-static
-dist
+dist/*
