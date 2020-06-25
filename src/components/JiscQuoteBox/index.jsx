@@ -8,7 +8,7 @@ const useStyles = ({ color }) =>
         root: {
             padding: theme.spacing(6),
             backgroundColor: theme.palette.background.quote,
-            borderRight: `3px solid ${theme.palette.jisc[color] || theme.palette.jisc.orange}`,
+            borderRight: `6px solid ${theme.palette.jisc[color] || theme.palette.jisc.orange}`,
             color: theme.palette.jisc[color] || theme.palette.jisc.orange
         }
     }));

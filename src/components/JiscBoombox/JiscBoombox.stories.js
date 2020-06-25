@@ -14,10 +14,12 @@ export default {
 export const Boombox1 = () => (
     <JiscBoombox backgroundImage='https://www.jisc.ac.uk/sites/default/files/abstract-blue-background-dark.jpg'>
         <Typography variant='h2'>Jisc Boombox Example 1</Typography>
+        <br />
         <Typography>
             Join our three-day online event and explore how to elevate the student experience during this challenging
             time
         </Typography>
+        <br />
         <JiscButton>Click me</JiscButton>
     </JiscBoombox>
 );
@@ -25,10 +27,12 @@ export const Boombox1 = () => (
 export const Boombox2 = () => (
     <JiscBoombox backgroundImage='https://www.jisc.ac.uk/sites/default/files/abstract-blue-background-dark.jpg'>
         <Typography variant='h2'>Jisc Boombox Example 2</Typography>
+        <br />
         <Typography>
             Join our three-day online event and explore how to elevate the student experience during this challenging
             time
         </Typography>
+        <br />
         <JiscButton style={{ marginTop: jiscTheme.spacing(3) }}>Click Here</JiscButton>
     </JiscBoombox>
 );
@@ -36,10 +40,12 @@ export const Boombox2 = () => (
 export const Boombox3 = () => (
     <JiscBoombox backgroundColor='orange'>
         <Typography variant='h2'>Jisc Boombox Example 3</Typography>
+        <br />
         <Typography>
             Join our three-day online event and explore how to elevate the student experience during this challenging
             time
         </Typography>
-        <JiscButton style={{ marginTop: jiscTheme.spacing(3) }}>Click Here</JiscButton>
+        <br />
+        <JiscButton>Click Here</JiscButton>
     </JiscBoombox>
 );

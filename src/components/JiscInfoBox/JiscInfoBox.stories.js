@@ -11,14 +11,16 @@ export default {
 
 export const InfoBox1 = () => (
     <JiscInfoBox imageUrl='https://www.jisc.ac.uk/sites/default/files/two-connected-workers-jisc-homepage_0.png'>
-        <Typography variant='h2'>Title</Typography>
+        <Typography variant='h2'> Your trusted partner in edtech</Typography>
+        <br />
         <Typography>
             We know that digital technology has the ability to transform education and research and are here to help you
             every step of the way.
         </Typography>
+        <br />
         <Typography>
-            Your Jisc membership includes a connection to the <Link href='http://google.com'>To Google</Link> superfast
-            and secure Janet Network, significant savings on content and expert advice and guidance on digital
+            Your Jisc membership includes a connection to the superfast and secure <Link>Janet Network</Link>,
+            significant <Link>savings on content</Link> and expert <Link>advice and guidance</Link> on digital
             technology for the sector.
         </Typography>
     </JiscInfoBox>
@@ -31,14 +33,16 @@ InfoBox1.story = {
 export const InfoBox2 = () => (
     <JiscInfoBox
         imageUrl='https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
-        color='darkOrange'
+        color='blue'
         backgroundColor='white'
     >
-        <Typography variant='h2'>Title</Typography>
+        <Typography variant='h2'>This is how a title should look!</Typography>
+        <br />
         <Typography>
             We know that digital technology has the ability to transform education and research and are here to help you
             every step of the way.
         </Typography>
+        <br />
         <Typography>
             Your Jisc membership includes a connection to the <Link href='http://google.com'>To Google</Link> superfast
             and secure Janet Network, significant savings on content and expert advice and guidance on digital
@@ -57,10 +61,13 @@ export const InfoBox3 = () => (
         backgroundColor='blue'
         color='white'
     >
+        <Typography variant='h2'>This is how a title should look!</Typography>
+        <br />
         <Typography>
             We know that digital technology has the ability to transform education and research and are here to help you
             every step of the way.
         </Typography>
+        <br />
         <Typography>
             Your Jisc membership includes a connection to the <Link href='http://google.com'>To Google</Link> superfast
             and secure Janet Network, significant savings on content and expert advice and guidance on digital

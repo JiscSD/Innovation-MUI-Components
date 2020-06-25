@@ -16,7 +16,7 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             color: theme.palette.jisc[color] || 'white',
-            padding: theme.spacing(16),
+            padding: '10rem 8rem',
             [breakpoints.down('xs')]: {
                 padding: '1rem'
             }

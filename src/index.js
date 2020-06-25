@@ -12,4 +12,17 @@ import JiscQuoteBox from './components/JiscQuoteBox';
 import JiscTitleBanner from './components/JiscTitleBanner';
 import JiscTopBox from './components/JiscTopBox';
 
-export { theme, JiscBanner, JiscBoombox, JiscButton, JiscCoronaBanner, JiscExpansionPanel, JiscFeatureBox, JiscInfoBox, JiscLogo, JiscQuoteBox, JiscTitleBanner, JiscTopBox };
+export {
+    theme,
+    JiscBanner,
+    JiscBoombox,
+    JiscButton,
+    JiscCoronaBanner,
+    JiscExpansionPanel,
+    JiscFeatureBox,
+    JiscInfoBox,
+    JiscLogo,
+    JiscQuoteBox,
+    JiscTitleBanner,
+    JiscTopBox
+};
