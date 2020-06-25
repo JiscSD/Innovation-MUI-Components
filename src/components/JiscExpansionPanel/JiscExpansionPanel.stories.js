@@ -26,6 +26,16 @@ export const ExpansionPanel1 = () => (
                 materials relevant to their work, accessible from wherever they need to be.
             </Typography>
         </JiscExpansionPanel>
+        <JiscExpansionPanel title={'Free access for FE and HE organisations until 31 July 2020'}>
+            <Typography>
+                During this time of unprecedented challenge, Jisc is extending access to Journal Archives and Historical
+                Texts for the delivery of content for research and study to all UK HE and FE institutions.
+            </Typography>
+            <Typography>
+                We hope to assist libraries in supporting their users by providing the widest possible range of
+                materials relevant to their work, accessible from wherever they need to be.
+            </Typography>
+        </JiscExpansionPanel>
     </div>
 );
 
