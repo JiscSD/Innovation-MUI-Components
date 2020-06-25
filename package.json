@@ -52,6 +52,7 @@
         "@storybook/addons": "^5.3.19",
         "@storybook/preset-create-react-app": "^3.1.2",
         "@storybook/react": "^5.3.19",
+        "eslint-plugin-simple-import-sort": "^5.0.3",
         "storybook-dark-mode": "^0.6.1"
     },
     "babel": {
