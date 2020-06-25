@@ -4,11 +4,11 @@ import JiscBanner from './components/JiscBanner';
 import CoronaBanner from './components/CoronaBanner';
 import JiscBoombox from './components/JiscBoombox';
 import JiscButton from './components/JiscButton';
+import JiscExpansionPanel from './components/JiscExpansionPanel';
+import JiscFeatureBox from './components/JiscFeatureBox';
+import JiscInfoBox from './components/JiscInfoBox';
 import JiscLogo from './components/JiscLogo';
 import JiscQuoteBox from './components/JiscQuoteBox';
-import JiscFeatureBox from './components/JiscFeatureBox';
-import JiscExpansionPannel from './components/JiscExpansionPanel';
-import JiscInfoBox from './components/JiscInfoBox';
 import JiscTopBox from './components/JiscTopBox';
 
 export {
@@ -17,10 +17,10 @@ export {
     JiscBanner,
     JiscBoombox,
     JiscButton,
-    JiscLogo,
-    JiscInfoBox,
-    JiscTopBox,
-    JiscQuoteBox,
+    JiscExpansionPanel,
     JiscFeatureBox,
-    JiscExpansionPannel
+    JiscInfoBox,
+    JiscLogo,
+    JiscQuoteBox,
+    JiscTopBox
 };
