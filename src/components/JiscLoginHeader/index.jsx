@@ -5,6 +5,7 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import theme from '../../theme';
 import JiscLogo from '../JiscLogo';
+import JiscButton from '../JiscButton';
 
 const breakpoints = createBreakpoints({});
 
@@ -33,7 +34,9 @@ const useStyles = ({ color, backgroundColor }) =>
         leftItems: {
             display: 'flex',
             alignItems: 'center',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '100%'
         },
         text: {
             color: theme.palette.jisc[color] || theme.palette.jisc.textGrey,
@@ -41,10 +44,13 @@ const useStyles = ({ color, backgroundColor }) =>
             [breakpoints.up('sm')]: {
                 marginLeft: theme.spacing(3)
             }
+        },
+        button: {
+            marginLeft: 'auto'
         }
     }));
 
-const JiscHeader = ({ title, color, backgroundColor }) => {
+const JiscLoginHeader = ({ title, color, backgroundColor, buttonColor }) => {
     const classes = useStyles({ color, backgroundColor })();
 
     return (
@@ -55,28 +61,33 @@ const JiscHeader = ({ title, color, backgroundColor }) => {
                     <Typography variant='body2' className={classes.text}>
                         {title}
                     </Typography>
+                    <JiscButton color={buttonColor} style={{ marginLeft: 'auto' }}>
+                        Login
+                    </JiscButton>
                 </div>
             </Container>
         </div>
     );
 };
 
-JiscHeader.propTypes = {
+JiscLoginHeader.propTypes = {
     title: PropTypes.string,
     color: PropTypes.string,
-    backgroundColor: PropTypes.string
+    backgroundColor: PropTypes.string,
+    buttonColor: PropTypes.string
 };
 
-JiscHeader.defaultProps = {
+JiscLoginHeader.defaultProps = {
     title: 'Jisc',
     color: 'textGrey',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    buttonColor: 'textGrey'
 };
 
 export default (props) => {
     return (
         <ThemeProvider theme={theme}>
-            <JiscHeader {...props} />
+            <JiscLoginHeader {...props} />
         </ThemeProvider>
     );
 };

@@ -29,10 +29,24 @@ export const Button2 = () => (
     </div>
 );
 
+export const Button3 = () => (
+    <div
+        style={{
+            padding: '4rem'
+        }}
+    >
+        <JiscButton color='orange'>Click Me</JiscButton>
+    </div>
+);
+
 Button1.story = {
     name: 'JiscButton1'
 };
 
 Button2.story = {
     name: 'JiscButton2'
+};
+
+Button3.story = {
+    name: 'JiscButton3'
 };
