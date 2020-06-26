@@ -99,7 +99,7 @@ const theme = createMuiTheme({
         MuiTypography: {
             h1: {
                 fontSize: '2.5rem',
-                fontWeight: '200',
+                fontWeight: '300',
                 [breakpoints.up('sm')]: {
                     fontSize: '3rem'
                 },
@@ -109,8 +109,7 @@ const theme = createMuiTheme({
             },
             h2: {
                 fontSize: '3.6rem',
-                fontWeight: '200',
-                // lineHeight: '4rem',
+                fontWeight: '300',
                 [breakpoints.up('sm')]: {
                     fontSize: '2.25rem'
                 },
@@ -120,7 +119,7 @@ const theme = createMuiTheme({
             },
             h3: {
                 fontSize: '1.5rem',
-                fontWeight: '200',
+                fontWeight: '300',
                 [breakpoints.up('sm')]: {
                     fontSize: '1.75rem'
                 },
@@ -146,7 +145,7 @@ const theme = createMuiTheme({
             },
             body1: {
                 fontSize: '1.3rem',
-                fontWeight: '200',
+                fontWeight: '300',
                 '& strong': {
                     fontWeight: '400'
                 }

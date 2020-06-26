@@ -9,7 +9,7 @@ const useStyles = ({ backgroundColor, color }) =>
             marginTop: theme.spacing(3),
             marginBottom: theme.spacing(3),
             backgroundColor: theme.palette.jisc[backgroundColor] || 'transparent',
-            color: theme.palette.jisc[color] || 'black'
+            color: theme.palette.jisc[color] || theme.palette.jisc.textGrey
         },
         marginAuto: {
             margin: 'auto'

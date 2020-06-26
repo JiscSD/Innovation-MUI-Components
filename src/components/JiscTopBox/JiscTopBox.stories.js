@@ -2,7 +2,7 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { Typography } from '@material-ui/core';
 
-import JiscTopBox from './index';
+import JiscTopBox from './index.jsx';
 
 export default {
     title: 'JiscTopBox',
@@ -16,6 +16,10 @@ export const TopBox1 = () => (
         rightImage='https://www.jisc.ac.uk/sites/default/files/connectivity-hero.jpg'
     >
         <Typography variant='h2'>Cyber security</Typography>
+        <Typography>
+            To help you get the most from your Jisc membership, we work to protect the Janet Network and connected
+            organisations
+        </Typography>
         <Typography>
             To help you get the most from your Jisc membership, we work to protect the Janet Network and connected
             organisations
