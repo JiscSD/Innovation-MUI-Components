@@ -5,7 +5,6 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import theme from '../../theme';
 import JiscLogo from '../JiscLogo';
-import JiscButton from '../JiscButton';
 
 const breakpoints = createBreakpoints({});
 
@@ -45,12 +44,12 @@ const useStyles = ({ color, backgroundColor }) =>
                 marginLeft: theme.spacing(3)
             }
         },
-        button: {
+        floatRight: {
             marginLeft: 'auto'
         }
     }));
 
-const JiscLoginHeader = ({ title, color, backgroundColor, buttonColor }) => {
+const JiscActionHeader = ({ title, color, backgroundColor, children }) => {
     const classes = useStyles({ color, backgroundColor })();
 
     return (
@@ -61,33 +60,30 @@ const JiscLoginHeader = ({ title, color, backgroundColor, buttonColor }) => {
                     <Typography variant='body2' className={classes.text}>
                         {title}
                     </Typography>
-                    <JiscButton color={buttonColor} style={{ marginLeft: 'auto' }}>
-                        Login
-                    </JiscButton>
+                    <div className={classes.floatRight}>{children}</div>
                 </div>
             </Container>
         </div>
     );
 };
 
-JiscLoginHeader.propTypes = {
+JiscActionHeader.propTypes = {
     title: PropTypes.string,
     color: PropTypes.string,
     backgroundColor: PropTypes.string,
-    buttonColor: PropTypes.string
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
 };
 
-JiscLoginHeader.defaultProps = {
+JiscActionHeader.defaultProps = {
     title: 'Jisc',
     color: 'textGrey',
-    backgroundColor: 'white',
-    buttonColor: 'textGrey'
+    backgroundColor: 'white'
 };
 
 export default (props) => {
     return (
         <ThemeProvider theme={theme}>
-            <JiscLoginHeader {...props} />
+            <JiscActionHeader {...props} />
         </ThemeProvider>
     );
 };
