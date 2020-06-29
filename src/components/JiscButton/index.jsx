@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, Button, ThemeProvider } from '@material-ui/core';
 
-import jiscTheme from '../../theme';
+import jiscTheme from '../../theme.js';
 
 const useStyles = ({ color, backgroundColor }) =>
     makeStyles((theme) => ({
         button: {
-            color: theme.palette.jisc[color] || theme.palette.jisc.white,
-            borderColor: theme.palette.jisc[color] || theme.palette.jisc.white,
-            backgroundColor: theme.palette.jisc[backgroundColor] || '',
             '&:hover': {
-                color: 'white',
+                backgroundColor: theme.palette.primary.main,
                 borderColor: theme.palette.primary.main,
-                backgroundColor: theme.palette.primary.main
-            }
+                color: 'white'
+            },
+            backgroundColor: theme.palette.jisc[backgroundColor] || '',
+            borderColor: theme.palette.jisc[color] || theme.palette.jisc.white,
+            color: theme.palette.jisc[color] || theme.palette.jisc.white
         }
     }));
 
@@ -25,13 +25,13 @@ const JiscButton = (props) => {
 };
 
 JiscButton.propTypes = {
-    color: PropTypes.string,
-    backgroundColor: PropTypes.string
+    backgroundColor: PropTypes.string,
+    color: PropTypes.string
 };
 
 JiscButton.defaultProps = {
-    color: 'white',
-    backgroundColor: ''
+    backgroundColor: '',
+    color: 'white'
 };
 
 export default (props) => {

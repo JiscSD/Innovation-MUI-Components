@@ -1,11 +1,11 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscHeader from './index';
+import JiscHeader from './index.jsx';
 
 export default {
-    title: 'JiscHeader',
+    component: JiscHeader,
     decorators: [withA11y],
-    component: JiscHeader
+    title: 'JiscHeader'
 };
 
 export const Header = () => <JiscHeader title='Jisc Header Example' />;

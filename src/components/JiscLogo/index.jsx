@@ -5,13 +5,13 @@ import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
     root: {
+        '&:focus': {
+            borderRadius: '0',
+            opacity: '.7',
+            outline: 'solid #fd6'
+        },
         '&:hover': {
             cursor: 'pointer',
-            opacity: '.7'
-        },
-        '&:focus': {
-            outline: 'solid #fd6',
-            borderRadius: '0',
             opacity: '.7'
         }
     }
@@ -47,14 +47,14 @@ const JiscLogo = ({ linkTo, height, svgTitle }) => {
 };
 
 JiscLogo.propTypes = {
-    linkTo: PropTypes.string,
     height: PropTypes.string,
+    linkTo: PropTypes.string,
     svgTitle: PropTypes.string
 };
 
 JiscLogo.defaultProps = {
-    linkTo: '/',
     height: '40px',
+    linkTo: '/',
     svgTitle: 'Go to the homepage'
 };
 

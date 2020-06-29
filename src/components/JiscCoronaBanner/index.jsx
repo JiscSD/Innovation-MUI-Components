@@ -1,31 +1,34 @@
 import React from 'react';
 import { makeStyles, Typography, Container, Link, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import jiscTheme from '../../theme';
+import jiscTheme from '../../theme.js';
 
 const breakpoints = createBreakpoints({});
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        height: 'inherit',
+        justifyContent: 'flex-start',
+        [breakpoints.up('sm')]: {
+            alignItems: 'center',
+            flexDirection: 'row',
+            justifyContent: 'space-around'
+        },
+        textAlign: 'center'
+    },
+    coronaLink: {
+        color: 'white'
+    },
     root: {
         backgroundColor: theme.palette.primary.main,
         paddingTop: theme.spacing(1),
         [breakpoints.up('sm')]: {
-            height: '45px',
             alignItems: 'center',
+            height: '45px',
             paddingTop: 0
         }
-    },
-    container: {
-        display: 'flex',
-        justifyContent: 'flex-start',
-        flexDirection: 'column',
-        height: 'inherit',
-        [breakpoints.up('sm')]: {
-            justifyContent: 'space-around',
-            flexDirection: 'row',
-            alignItems: 'center'
-        },
-        textAlign: 'center'
     },
     text: {
         color: '#fff',
@@ -33,9 +36,6 @@ const useStyles = makeStyles((theme) => ({
         [breakpoints.up('sm')]: {
             marginLeft: theme.spacing(3)
         }
-    },
-    coronaLink: {
-        color: 'white'
     }
 }));
 

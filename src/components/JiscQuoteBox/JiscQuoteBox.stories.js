@@ -1,12 +1,11 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import { Typography, Link } from '@material-ui/core';
-import JiscQuoteBox from './index';
+import JiscQuoteBox from './index.jsx';
 
 export default {
-    title: 'JiscQuoteBox',
+    component: JiscQuoteBox,
     decorators: [withA11y],
-    component: JiscQuoteBox
+    title: 'JiscQuoteBox'
 };
 
 export const QuoteBox1 = () => <JiscQuoteBox text='Hello, this is the first Jisc Quote Box with default colors' />;

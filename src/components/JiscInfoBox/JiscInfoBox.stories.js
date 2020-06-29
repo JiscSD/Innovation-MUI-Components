@@ -1,12 +1,12 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { Typography, Link } from '@material-ui/core';
-import JiscInfoBox from './index';
+import JiscInfoBox from './index.jsx';
 
 export default {
-    title: 'JiscInfoBox',
+    component: JiscInfoBox,
     decorators: [withA11y],
-    component: JiscInfoBox
+    title: 'JiscInfoBox'
 };
 
 export const InfoBox1 = () => (
@@ -19,9 +19,11 @@ export const InfoBox1 = () => (
         </Typography>
         <br />
         <Typography>
-            Your Jisc membership includes a connection to the superfast and secure <Link>Janet Network</Link>,
-            significant <Link>savings on content</Link> and expert <Link>advice and guidance</Link> on digital
-            technology for the sector.
+            Your Jisc membership includes a connection to the superfast and secure{' '}
+            <Link href='https://components.ai.alpha.jisc.ac.uk'>Janet Network</Link>, significant{' '}
+            <Link href='https://components.ai.alpha.jisc.ac.uk'>savings on content</Link> and expert{' '}
+            <Link href='https://components.ai.alpha.jisc.ac.uk'>advice and guidance</Link> on digital technology for the
+            sector.
         </Typography>
     </JiscInfoBox>
 );

@@ -3,9 +3,9 @@ import { withA11y } from '@storybook/addon-a11y';
 import JiscButton from './index';
 
 export default {
-    title: 'JiscButton',
+    component: JiscButton,
     decorators: [withA11y],
-    component: JiscButton
+    title: 'JiscButton'
 };
 
 export const Button1 = () => (

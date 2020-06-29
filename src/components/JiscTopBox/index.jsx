@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, ThemeProvider, Grid } from '@material-ui/core';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
-import jiscTheme from '../../theme';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
+import { Grid, ThemeProvider, makeStyles } from '@material-ui/core';
+import jiscTheme from '../../theme.js';
 
 const breakpoints = createBreakpoints({});
 
 const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, color }) =>
     makeStyles((theme) => ({
         containerLeft: {
-            backgroundImage: leftImage && `url(${leftImage})`,
             backgroundColor: theme.palette.jisc[leftBackgroundColor],
+            backgroundImage: leftImage && `url(${leftImage})`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             color: theme.palette.jisc[color] || 'white',
-            paddingTop: theme.spacing(10),
             paddingBottom: theme.spacing(10),
             paddingRight: theme.spacing(4),
+            paddingTop: theme.spacing(10),
             [breakpoints.down('md')]: {
                 padding: theme.spacing(8)
             },
@@ -27,8 +27,8 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
             }
         },
         containerRight: {
-            backgroundImage: rightImage && `url(${rightImage})`,
             backgroundColor: theme.palette.jisc[rightBackgroundColor],
+            backgroundImage: rightImage && `url(${rightImage})`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover'
@@ -37,18 +37,18 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
 
 const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, color, children }) => {
     const classes = useStyles({
-        leftImage,
-        rightImage,
+        color,
         leftBackgroundColor,
+        leftImage,
         rightBackgroundColor,
-        color
+        rightImage
     })();
 
     return (
         <Grid container className={classes.root}>
             <Grid item md={6} xs={12} className={classes.containerLeft}>
                 <Grid container>
-                    <Grid item lg={4} xl={5}></Grid>
+                    <Grid item lg={4} xl={5} />
                     <Grid item xs={12} sm={12} md={12} lg={8} xl={7}>
                         {children}
                     </Grid>
@@ -60,10 +60,20 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
 };
 
 JiscImageBanner.propTypes = {
-    leftImage: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    color: PropTypes.string,
     leftBackgroundColor: PropTypes.string,
-    rightImage: PropTypes.string,
-    rightBackgroundColor: PropTypes.string
+    leftImage: PropTypes.string,
+    rightBackgroundColor: PropTypes.string,
+    rightImage: PropTypes.string
+};
+
+JiscImageBanner.defaultProps = {
+    color: 'textGrey',
+    leftBackgroundColor: 'orange',
+    leftImage: 'https://www.jisc.ac.uk/sites/default/files/node-transparent-8d1558.png',
+    rightBackgroundColor: 'https://www.jisc.ac.uk/sites/default/files/connectivity-hero.jpg',
+    rightImage: 'white'
 };
 
 export default (props) => {

@@ -5,60 +5,35 @@ import roboto from 'typeface-roboto';
 const breakpoints = createBreakpoints({});
 
 const theme = createMuiTheme({
-    palette: {
-        background: {
-            default: '#fff',
-            banner: '#333333',
-            quote: '#e4eaec'
-        },
-        primary: {
-            main: '#007aaa'
-        },
-        error: {
-            main: '#f44336'
-        },
-        warning: {
-            main: '#ff9800'
-        },
-        info: {
-            main: '#2196f3'
-        },
-        success: {
-            main: '#4caf50'
-        },
-        jisc: {
-            white: '#ffffff',
-            orange: '#e85e13',
-            darkOrange: '#9f3515',
-            pink: '#e61554',
-            yellow: '#f9b000',
-            lime: '#b2bb1c',
-            blue: '#0092cb',
-            violet: '#b71a8b',
-            maroon: '#820036',
-            olive: '#8a7300',
-            green: '#458525',
-            indigo: '#00557f',
-            purple: '#552481',
-            textGrey: '#2c3841',
-            supportText: '#525e67',
-            darkGrey: '#9ba7b0',
-            midGrey: '#b9c9d5',
-            lightGrey: '#cadfb0',
-            additionalGrey: '#fafafa'
-        }
-    },
-
-    typography: {
-        fontFamily: 'Roboto',
-        color: '#2c3841'
-    },
-
     overrides: {
-        MuiTabs: {
+        MuiLink: {
             root: {
-                color: 'white',
-                backgroundColor: '#3c525f'
+                '&:active': {
+                    backgroundColor: '#fd6',
+                    color: '#007aaa',
+                    outline: 'solid #fd6',
+                    textDecoration: 'underline'
+                },
+                '&:focus': {
+                    backgroundColor: '#fd6',
+                    color: '#007aaa',
+                    outline: 'solid #fd6',
+                    textDecoration: 'none'
+                },
+                '&:focus:hover': {
+                    backgroundColor: '#fd6',
+                    color: '#007aaa',
+                    outline: 'solid #fd6',
+                    textDecoration: 'underline'
+                },
+                '&:hover': {
+                    color: '#ae460e',
+                    cursor: 'pointer',
+                    transition: 'color .2s ease'
+                },
+                border: '0',
+                color: '#007aaa',
+                textDecoration: 'underline !important'
             }
         },
         MuiTab: {
@@ -66,37 +41,26 @@ const theme = createMuiTheme({
                 color: 'white'
             }
         },
-        MuiLink: {
+        MuiTabs: {
             root: {
-                textDecoration: 'underline !important',
-                color: '#007aaa',
-                border: '0',
-                '&:hover': {
-                    color: '#ae460e',
-                    transition: 'color .2s ease',
-                    cursor: 'pointer'
-                },
-                '&:focus': {
-                    color: '#007aaa',
-                    textDecoration: 'none',
-                    backgroundColor: '#fd6',
-                    outline: 'solid #fd6'
-                },
-                '&:focus:hover': {
-                    color: '#007aaa',
-                    textDecoration: 'underline',
-                    backgroundColor: '#fd6',
-                    outline: 'solid #fd6'
-                },
-                '&:active': {
-                    color: '#007aaa',
-                    textDecoration: 'underline',
-                    backgroundColor: '#fd6',
-                    outline: 'solid #fd6'
-                }
+                backgroundColor: '#3c525f',
+                color: 'white'
             }
         },
         MuiTypography: {
+            body1: {
+                '& strong': {
+                    fontWeight: '400'
+                },
+                fontSize: '1.3rem',
+                fontWeight: '300'
+            },
+            body2: {
+                '& strong': {
+                    fontWeight: 500
+                },
+                fontSize: '1rem'
+            },
             h1: {
                 fontSize: '2.5rem',
                 fontWeight: '300',
@@ -143,19 +107,6 @@ const theme = createMuiTheme({
             h6: {
                 fontSize: '1rem'
             },
-            body1: {
-                fontSize: '1.3rem',
-                fontWeight: '300',
-                '& strong': {
-                    fontWeight: '400'
-                }
-            },
-            body2: {
-                fontSize: '1rem',
-                '& strong': {
-                    fontWeight: 500
-                }
-            },
             overline: {
                 fontSize: '0.875rem',
                 [breakpoints.up('md')]: {
@@ -163,6 +114,53 @@ const theme = createMuiTheme({
                 }
             }
         }
+    },
+    palette: {
+        background: {
+            banner: '#333333',
+            default: '#fff',
+            quote: '#e4eaec'
+        },
+        error: {
+            main: '#f44336'
+        },
+        info: {
+            main: '#2196f3'
+        },
+        jisc: {
+            additionalGrey: '#fafafa',
+            blue: '#0092cb',
+            darkGrey: '#9ba7b0',
+            darkOrange: '#9f3515',
+            green: '#458525',
+            indigo: '#00557f',
+            lightGrey: '#cadfb0',
+            lime: '#b2bb1c',
+            maroon: '#820036',
+            midGrey: '#b9c9d5',
+            olive: '#8a7300',
+            orange: '#e85e13',
+            pink: '#e61554',
+            purple: '#552481',
+            supportText: '#525e67',
+            textGrey: '#2c3841',
+            violet: '#b71a8b',
+            white: '#ffffff',
+            yellow: '#f9b000'
+        },
+        primary: {
+            main: '#007aaa'
+        },
+        success: {
+            main: '#4caf50'
+        },
+        warning: {
+            main: '#ff9800'
+        }
+    },
+    typography: {
+        color: '#2c3841',
+        fontFamily: 'Roboto'
     }
 });
 

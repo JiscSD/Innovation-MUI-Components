@@ -1,14 +1,13 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { Typography } from '@material-ui/core';
-import JiscBoombox from './index';
-import JiscButton from '../JiscButton';
-import jiscTheme from '../../theme';
+import JiscBoombox from './index.jsx';
+import JiscButton from '../JiscButton/index.jsx';
 
 export default {
-    title: 'JiscBoombox',
+    component: JiscBoombox,
     decorators: [withA11y],
-    component: JiscBoombox
+    title: 'JiscBoombox'
 };
 
 export const Boombox1 = () => (
@@ -114,7 +113,7 @@ export const Boombox8 = () => (
 
 export const Boombox9 = () => (
     <JiscBoombox
-        backgroundCover={true}
+        backgroundCover
         backgroundImage='https://play.ai.alpha.jisc.ac.uk/static/media/home-billboard-1.7cb41ac7.jpg'
     >
         <Typography variant='h2'>The Home of AI Tools</Typography>

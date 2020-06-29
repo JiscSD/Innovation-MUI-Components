@@ -3,37 +3,37 @@ import PropTypes from 'prop-types';
 import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
-import theme from '../../theme';
-import JiscLogo from '../JiscLogo';
+import jiscTheme from '../../theme.js';
+import JiscLogo from '../JiscLogo/index.jsx';
 
 const breakpoints = createBreakpoints({});
 
 const useStyles = ({ color, backgroundColor }) =>
     makeStyles((theme) => ({
+        container: {
+            display: 'flex',
+            flexDirection: 'column',
+            height: 'inherit',
+            justifyContent: 'flex-start',
+            [breakpoints.up('sm')]: {
+                alignItems: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+            }
+        },
+        leftItems: {
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'row'
+        },
         root: {
             backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.jisc.white,
             paddingTop: theme.spacing(1),
             [breakpoints.up('sm')]: {
-                height: '55px',
                 alignItems: 'center',
+                height: '55px',
                 paddingTop: 0
             }
-        },
-        container: {
-            display: 'flex',
-            justifyContent: 'flex-start',
-            flexDirection: 'column',
-            height: 'inherit',
-            [breakpoints.up('sm')]: {
-                justifyContent: 'space-between',
-                flexDirection: 'row',
-                alignItems: 'center'
-            }
-        },
-        leftItems: {
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'row'
         },
         text: {
             color: theme.palette.jisc[color] || theme.palette.jisc.textGrey,
@@ -44,8 +44,8 @@ const useStyles = ({ color, backgroundColor }) =>
         }
     }));
 
-const JiscHeader = ({ title, color, backgroundColor }) => {
-    const classes = useStyles({ color, backgroundColor })();
+const JiscHeader = ({ backgroundColor, color, title }) => {
+    const classes = useStyles({ backgroundColor, color })();
 
     return (
         <div className={classes.root}>
@@ -62,20 +62,20 @@ const JiscHeader = ({ title, color, backgroundColor }) => {
 };
 
 JiscHeader.propTypes = {
-    title: PropTypes.string,
+    backgroundColor: PropTypes.string,
     color: PropTypes.string,
-    backgroundColor: PropTypes.string
+    title: PropTypes.string
 };
 
 JiscHeader.defaultProps = {
-    title: 'Jisc',
+    backgroundColor: 'white',
     color: 'textGrey',
-    backgroundColor: 'white'
+    title: 'Jisc'
 };
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscHeader {...props} />
         </ThemeProvider>
     );

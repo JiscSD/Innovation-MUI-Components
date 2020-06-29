@@ -1,11 +1,11 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscAzureLogo from './index';
+import JiscAzureLogo from './index.jsx';
 
 export default {
-    title: 'JiscAzureLogo',
+    component: JiscAzureLogo,
     decorators: [withA11y],
-    component: JiscAzureLogo
+    title: 'JiscAzureLogo'
 };
 
 export const AzureLogo1 = () => (
