@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
     makeStyles,
     ThemeProvider,
@@ -10,37 +11,34 @@ import {
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import jiscTheme from '../../theme';
+import jiscTheme from '../../theme.js';
 
-const useStyles = ({ titleColor }) =>
-    makeStyles((theme) => ({
-        panel: {
-            borderTop: `1px solid ${theme.palette.jisc.midGrey}`,
-            borderBottom: `1px solid ${theme.palette.jisc.midGrey}`
+const useStyles = makeStyles((theme) => ({
+    details: {
+        display: 'block',
+        padding: theme.spacing(2)
+    },
+    expanded: {
+        backgroundColor: theme.palette.jisc.additionalGrey
+    },
+    expandIcon: {
+        order: -1
+    },
+    panel: {
+        borderBottom: `1px solid ${theme.palette.jisc.midGrey}`,
+        borderTop: `1px solid ${theme.palette.jisc.midGrey}`
+    },
+    title: {
+        '&:hover': {
+            borderColor: theme.palette.primary.main,
+            color: theme.palette.jisc.orange
         },
-        title: {
-            color: theme.palette.jisc.blue,
-            '&:hover': {
-                color: theme.palette.jisc.orange,
-                borderColor: theme.palette.primary.main
-            }
-        },
-        expandIcon: {
-            order: -1
-        },
-        expanded: {
-            backgroundColor: theme.palette.jisc.additionalGrey
-        },
-        details: {
-            display: 'block',
-            padding: theme.spacing(2)
-        }
-    }));
+        color: theme.palette.jisc.blue
+    }
+}));
 
-const JiscExpansionPanel = ({ title, titleColor, children }) => {
-    const classes = useStyles({
-        titleColor
-    })();
+const JiscExpansionPanel = ({ title, children }) => {
+    const classes = useStyles();
 
     return (
         <Container maxWidth='md'>
@@ -60,6 +58,11 @@ const JiscExpansionPanel = ({ title, titleColor, children }) => {
             </ExpansionPanel>
         </Container>
     );
+};
+
+JiscExpansionPanel.propTypes = {
+    children: PropTypes.node.isRequired,
+    title: PropTypes.string.isRequired
 };
 
 export default (props) => {

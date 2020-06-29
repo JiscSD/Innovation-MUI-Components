@@ -1,11 +1,11 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscCoronaBanner from './index';
+import JiscCoronaBanner from './index.jsx';
 
 export default {
-    title: 'JiscCoronaBanner',
+    component: JiscCoronaBanner,
     decorators: [withA11y],
-    component: JiscCoronaBanner
+    title: 'JiscCoronaBanner'
 };
 
 export const Banner = () => <JiscCoronaBanner />;

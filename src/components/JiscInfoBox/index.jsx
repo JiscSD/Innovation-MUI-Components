@@ -1,27 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles, ThemeProvider, Grid, Container } from '@material-ui/core';
 
-import jiscTheme from '../../theme';
+import jiscTheme from '../../theme.js';
 
 const useStyles = ({ backgroundColor, color }) =>
     makeStyles((theme) => ({
-        root: {
-            marginTop: theme.spacing(3),
-            marginBottom: theme.spacing(3),
-            backgroundColor: theme.palette.jisc[backgroundColor] || 'transparent',
-            color: theme.palette.jisc[color] || theme.palette.jisc.textGrey
+        image: {
+            height: '100%',
+            objectFit: 'cover',
+            width: '100%'
         },
         marginAuto: {
             margin: 'auto'
         },
-        image: {
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
+        root: {
+            backgroundColor: theme.palette.jisc[backgroundColor] || 'transparent',
+            color: theme.palette.jisc[color] || theme.palette.jisc.textGrey,
+            marginBottom: theme.spacing(3),
+            marginTop: theme.spacing(3)
         }
     }));
 
-const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition = 'right' }) => {
+const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition }) => {
     const classes = useStyles({ backgroundColor, color })();
     return (
         <div className={classes.root}>
@@ -37,6 +38,21 @@ const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition
             </Container>
         </div>
     );
+};
+
+JiscInfoBox.propTypes = {
+    backgroundColor: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    color: PropTypes.string,
+    imagePosition: PropTypes.string,
+    imageUrl: PropTypes.string
+};
+
+JiscInfoBox.defaultProps = {
+    backgroundColor: 'transparent',
+    color: 'textGrey',
+    imagePosition: 'right',
+    imageUrl: 'https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
 };
 
 export default (props) => {

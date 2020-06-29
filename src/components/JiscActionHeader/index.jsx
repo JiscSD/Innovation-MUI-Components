@@ -3,39 +3,43 @@ import PropTypes from 'prop-types';
 import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
-import theme from '../../theme';
-import JiscLogo from '../JiscLogo';
+import jiscTheme from '../../theme.js';
+import JiscLogo from '../JiscLogo/index.jsx';
 
 const breakpoints = createBreakpoints({});
 
 const useStyles = ({ color, backgroundColor }) =>
     makeStyles((theme) => ({
+        container: {
+            display: 'flex',
+            flexDirection: 'column',
+            height: 'inherit',
+            justifyContent: 'flex-start',
+            [breakpoints.up('sm')]: {
+                alignItems: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+            }
+        },
+
+        floatRight: {
+            marginLeft: 'auto'
+        },
+        leftItems: {
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '100%'
+        },
         root: {
             backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.jisc.white,
             paddingTop: theme.spacing(1),
             [breakpoints.up('sm')]: {
-                height: '55px',
                 alignItems: 'center',
+                height: '55px',
                 paddingTop: 0
             }
-        },
-        container: {
-            display: 'flex',
-            justifyContent: 'flex-start',
-            flexDirection: 'column',
-            height: 'inherit',
-            [breakpoints.up('sm')]: {
-                justifyContent: 'space-between',
-                flexDirection: 'row',
-                alignItems: 'center'
-            }
-        },
-        leftItems: {
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            width: '100%'
         },
         text: {
             color: theme.palette.jisc[color] || theme.palette.jisc.textGrey,
@@ -43,14 +47,11 @@ const useStyles = ({ color, backgroundColor }) =>
             [breakpoints.up('sm')]: {
                 marginLeft: theme.spacing(3)
             }
-        },
-        floatRight: {
-            marginLeft: 'auto'
         }
     }));
 
 const JiscActionHeader = ({ title, color, backgroundColor, children }) => {
-    const classes = useStyles({ color, backgroundColor })();
+    const classes = useStyles({ backgroundColor, color })();
 
     return (
         <div className={classes.root}>
@@ -68,21 +69,21 @@ const JiscActionHeader = ({ title, color, backgroundColor, children }) => {
 };
 
 JiscActionHeader.propTypes = {
-    title: PropTypes.string,
-    color: PropTypes.string,
     backgroundColor: PropTypes.string,
-    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+    color: PropTypes.string,
+    title: PropTypes.string
 };
 
 JiscActionHeader.defaultProps = {
-    title: 'Jisc',
+    backgroundColor: 'white',
     color: 'textGrey',
-    backgroundColor: 'white'
+    title: 'Jisc'
 };
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscActionHeader {...props} />
         </ThemeProvider>
     );

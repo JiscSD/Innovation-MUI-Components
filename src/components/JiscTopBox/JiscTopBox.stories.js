@@ -3,12 +3,12 @@ import { withA11y } from '@storybook/addon-a11y';
 import { Typography, Link } from '@material-ui/core';
 
 import JiscTopBox from './index.jsx';
-import JiscInfoBox from './../JiscInfoBox';
+import JiscInfoBox from '../JiscInfoBox/index.jsx';
 
 export default {
-    title: 'JiscTopBox',
+    component: JiscTopBox,
     decorators: [withA11y],
-    component: JiscTopBox
+    title: 'JiscTopBox'
 };
 
 export const TopBox1 = () => (

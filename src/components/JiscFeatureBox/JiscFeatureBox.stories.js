@@ -1,12 +1,12 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { Typography } from '@material-ui/core';
-import JiscFeatureBox from './index';
+import JiscFeatureBox from './index.jsx';
 
 export default {
-    title: 'JiscFeatureBox',
+    component: JiscFeatureBox,
     decorators: [withA11y],
-    component: JiscFeatureBox
+    title: 'JiscFeatureBox'
 };
 
 export const FeatureBox1 = () => (

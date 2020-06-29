@@ -8,7 +8,7 @@ const findDirectories = (source) =>
 const exportStatement = (components) => `export { theme, ${components.join(', ')} };`;
 
 const importStatements = (components) =>
-    components.map((component) => `import ${component} from './components/${component}';`).join('\n');
+    components.map((component) => `import ${component} from './components/${component}/index.jsx';`).join('\n');
 
 const componentNames = findDirectories('src/components');
 

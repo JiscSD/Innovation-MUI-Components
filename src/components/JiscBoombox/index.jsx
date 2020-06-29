@@ -2,46 +2,55 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, ThemeProvider } from '@material-ui/core';
 
-import theme from '../../theme';
+import jiscTheme from '../../theme.js';
 
 const useStyles = ({ backgroundColor, backgroundImage, color, paddingChoice, backgroundCover }) =>
     makeStyles((theme) => ({
         root: {
             backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.background.banner,
-            backgroundSize: backgroundCover ? 'cover' : 'auto',
             backgroundImage: `url(${backgroundImage})` || '',
+            backgroundSize: backgroundCover ? 'cover' : 'auto',
+            color: theme.palette.jisc[color] || 'white',
             padding: theme.spacing(paddingChoice || 10),
-            textAlign: 'center',
-            color: theme.palette.jisc[color] || 'white'
+            textAlign: 'center'
         }
     }));
 
 const JiscBoombox = ({ backgroundColor, color, backgroundImage, children, padding, backgroundCover }) => {
     const paddingSizes = {
-        xs: 2,
-        sm: 6,
+        lg: 14,
         md: 10,
-        lg: 14
+        sm: 6,
+        xs: 2
     };
 
     const paddingChoice = paddingSizes[padding] || null;
 
-    const classes = useStyles({ backgroundColor, backgroundImage, color, paddingChoice, backgroundCover })();
+    const classes = useStyles({ backgroundColor, backgroundCover, backgroundImage, color, paddingChoice })();
 
     return <div className={classes.root}>{children}</div>;
 };
 
 JiscBoombox.propTypes = {
     backgroundColor: PropTypes.string,
+    backgroundCover: PropTypes.bool,
     backgroundImage: PropTypes.string,
-    children: PropTypes.node,
-    padding: PropTypes.string,
-    backgroundCover: PropTypes.bool
+    children: PropTypes.node.isRequired,
+    color: PropTypes.string,
+    padding: PropTypes.string
+};
+
+JiscBoombox.defaultProps = {
+    backgroundColor: 'orange',
+    backgroundCover: true,
+    backgroundImage: 'https://www.jisc.ac.uk/sites/default/files/abstract-blue-background-dark.jpg',
+    color: 'white',
+    padding: 'md'
 };
 
 export default (props) => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={jiscTheme}>
             <JiscBoombox {...props} />
         </ThemeProvider>
     );

@@ -1,11 +1,11 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscTitleBanner from './index';
+import JiscTitleBanner from './index.jsx';
 
 export default {
-    title: 'JiscTitleBanner',
+    component: JiscTitleBanner,
     decorators: [withA11y],
-    component: JiscTitleBanner
+    title: 'JiscTitleBanner'
 };
 
 export const Banner1 = () => <JiscTitleBanner title='Text Analytics' />;

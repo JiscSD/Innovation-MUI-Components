@@ -1,12 +1,12 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import { Typography, Link } from '@material-ui/core';
-import JiscExpansionPanel from './index';
+import { Typography } from '@material-ui/core';
+import JiscExpansionPanel from './index.jsx';
 
 export default {
-    title: 'JiscExpansionPanel',
+    component: JiscExpansionPanel,
     decorators: [withA11y],
-    component: JiscExpansionPanel
+    title: 'JiscExpansionPanel'
 };
 
 export const ExpansionPanel1 = () => (
@@ -16,7 +16,7 @@ export const ExpansionPanel1 = () => (
             padding: '4rem'
         }}
     >
-        <JiscExpansionPanel title={'Free access for FE and HE organisations until 31 July 2020'}>
+        <JiscExpansionPanel title='Free access for FE and HE organisations until 31 July 2020'>
             <Typography>
                 During this time of unprecedented challenge, Jisc is extending access to Journal Archives and Historical
                 Texts for the delivery of content for research and study to all UK HE and FE institutions.
@@ -26,7 +26,7 @@ export const ExpansionPanel1 = () => (
                 materials relevant to their work, accessible from wherever they need to be.
             </Typography>
         </JiscExpansionPanel>
-        <JiscExpansionPanel title={'Free access for FE and HE organisations until 31 July 2020'}>
+        <JiscExpansionPanel title='Free access for FE and HE organisations until 31 July 2020'>
             <Typography>
                 During this time of unprecedented challenge, Jisc is extending access to Journal Archives and Historical
                 Texts for the delivery of content for research and study to all UK HE and FE institutions.

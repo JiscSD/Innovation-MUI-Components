@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import jiscTheme from '../../theme';
+import { createBreakpoints } from '@material-ui/core/styles';
+import jiscTheme from '../../theme.js';
 
 const breakpoints = createBreakpoints({});
 
 const useStyles = ({ backgroundColor, color }) =>
     makeStyles((theme) => ({
-        root: {
-            backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.jisc.orange,
-            [breakpoints.up('sm')]: {
-                height: '75px',
-                alignItems: 'center'
-            }
-        },
         container: {
             display: 'flex',
-            justifyContent: 'flex-start',
             flexDirection: 'column',
             height: 'inherit',
+            justifyContent: 'flex-start',
             [breakpoints.up('sm')]: {
                 alignItems: 'center',
                 flexDirection: 'row'
+            }
+        },
+        root: {
+            backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.jisc.orange,
+            [breakpoints.up('sm')]: {
+                alignItems: 'center',
+                height: '75px'
             }
         },
         text: {
@@ -49,9 +49,14 @@ const JiscTitleBanner = ({ backgroundColor, color, title }) => {
 };
 
 JiscTitleBanner.propTypes = {
-    title: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string,
     color: PropTypes.string,
-    backgroundColor: PropTypes.string
+    title: PropTypes.string.isRequired
+};
+
+JiscTitleBanner.defaultProps = {
+    backgroundColor: 'orange',
+    color: 'white'
 };
 
 export default (props) => {
