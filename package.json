@@ -1,6 +1,6 @@
 {
     "name": "jisc-innovation-mui-components",
-    "version": "0.3.0",
+    "version": "0.3.3",
     "main": "dist/",
     "private": false,
     "dependencies": {
