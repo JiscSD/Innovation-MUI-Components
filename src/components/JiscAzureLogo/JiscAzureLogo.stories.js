@@ -8,7 +8,7 @@ export default {
     component: JiscAzureLogo
 };
 
-export const Button1 = () => (
+export const AzureLogo1 = () => (
     <div
         style={{
             padding: '4rem'
@@ -18,7 +18,7 @@ export const Button1 = () => (
     </div>
 );
 
-export const Button2 = () => (
+export const AzureLogo2 = () => (
     <div
         style={{
             padding: '4rem'
