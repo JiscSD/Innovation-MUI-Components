@@ -18,8 +18,12 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
             color: theme.palette.jisc[color] || 'white',
             paddingTop: theme.spacing(10),
             paddingBottom: theme.spacing(10),
+            paddingRight: theme.spacing(4),
             [breakpoints.down('md')]: {
-                padding: theme.spacing(4)
+                padding: theme.spacing(8)
+            },
+            [breakpoints.down('sm')]: {
+                padding: theme.spacing(8)
             }
         },
         containerRight: {
