@@ -1,11 +1,11 @@
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
-import JiscAWSLogo from './index';
+import JiscAWSLogo from './index.jsx';
 
 export default {
-    title: 'JiscAWSLogo',
+    component: JiscAWSLogo,
     decorators: [withA11y],
-    component: JiscAWSLogo
+    title: 'JiscAWSLogo'
 };
 
 export const AWSLogo1 = () => (
