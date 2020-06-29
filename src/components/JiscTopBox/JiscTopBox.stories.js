@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { Typography, Link } from '@material-ui/core';
 
 import JiscTopBox from './index.jsx';
-import JiscInfoBox from './../JiscInfoBox.jsx';
+import JiscInfoBox from './../JiscInfoBox';
 
 export default {
     title: 'JiscTopBox',
