@@ -16,9 +16,10 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             color: theme.palette.jisc[color] || 'white',
-            padding: theme.spacing(16),
-            [breakpoints.down('xs')]: {
-                padding: '1rem'
+            paddingTop: theme.spacing(6),
+            paddingBottom: theme.spacing(6),
+            [breakpoints.down('md')]: {
+                padding: theme.spacing(4)
             }
         },
         containerRight: {
@@ -42,7 +43,12 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
     return (
         <Grid container className={classes.root}>
             <Grid item md={6} xs={12} className={classes.containerLeft}>
-                {children}
+                <Grid container>
+                    <Grid item lg={4} xl={5}></Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={8} xl={7}>
+                        {children}
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid item md={6} className={classes.containerRight} />
         </Grid>

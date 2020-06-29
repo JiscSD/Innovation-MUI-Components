@@ -4,19 +4,29 @@ import { makeStyles, ThemeProvider } from '@material-ui/core';
 
 import theme from '../../theme';
 
-const useStyles = ({ backgroundColor, backgroundImage, color }) =>
+const useStyles = ({ backgroundColor, backgroundImage, color, paddingChoice, backgroundCover }) =>
     makeStyles((theme) => ({
         root: {
             backgroundColor: theme.palette.jisc[backgroundColor] || theme.palette.background.banner,
+            backgroundSize: backgroundCover ? 'cover' : 'auto',
             backgroundImage: `url(${backgroundImage})` || '',
-            padding: theme.spacing(8),
+            padding: theme.spacing(paddingChoice || 10),
             textAlign: 'center',
             color: theme.palette.jisc[color] || 'white'
         }
     }));
 
-const JiscBoombox = ({ backgroundColor, color, backgroundImage, children }) => {
-    const classes = useStyles({ backgroundColor, backgroundImage, color })();
+const JiscBoombox = ({ backgroundColor, color, backgroundImage, children, padding, backgroundCover }) => {
+    const paddingSizes = {
+        xs: 2,
+        sm: 6,
+        md: 10,
+        lg: 14
+    };
+
+    const paddingChoice = paddingSizes[padding] || null;
+
+    const classes = useStyles({ backgroundColor, backgroundImage, color, paddingChoice, backgroundCover })();
 
     return <div className={classes.root}>{children}</div>;
 };
@@ -24,7 +34,9 @@ const JiscBoombox = ({ backgroundColor, color, backgroundImage, children }) => {
 JiscBoombox.propTypes = {
     backgroundColor: PropTypes.string,
     backgroundImage: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
+    padding: PropTypes.string,
+    backgroundCover: PropTypes.bool
 };
 
 export default (props) => {
