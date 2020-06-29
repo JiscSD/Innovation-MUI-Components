@@ -4,11 +4,12 @@ import { makeStyles, Button, ThemeProvider } from '@material-ui/core';
 
 import jiscTheme from '../../theme';
 
-const useStyles = ({ color }) =>
+const useStyles = ({ color, backgroundColor }) =>
     makeStyles((theme) => ({
         button: {
             color: theme.palette.jisc[color] || theme.palette.jisc.white,
             borderColor: theme.palette.jisc[color] || theme.palette.jisc.white,
+            backgroundColor: theme.palette.jisc[backgroundColor] || '',
             '&:hover': {
                 color: 'white',
                 borderColor: theme.palette.primary.main,
@@ -24,11 +25,13 @@ const JiscButton = (props) => {
 };
 
 JiscButton.propTypes = {
-    color: PropTypes.string
+    color: PropTypes.string,
+    backgroundColor: PropTypes.string
 };
 
 JiscButton.defaultProps = {
-    color: 'white'
+    color: 'white',
+    backgroundColor: ''
 };
 
 export default (props) => {
