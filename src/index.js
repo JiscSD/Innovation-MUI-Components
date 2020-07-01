@@ -1,30 +1,19 @@
 import theme from './theme.js';
 
-import JiscActionHeader from './components/JiscActionHeader/index.jsx';
-import JiscBoombox from './components/JiscBoombox/index.jsx';
-import JiscButton from './components/JiscButton/index.jsx';
-import JiscCoronaBanner from './components/JiscCoronaBanner/index.jsx';
-import JiscExpansionPanel from './components/JiscExpansionPanel/index.jsx';
-import JiscFeatureBox from './components/JiscFeatureBox/index.jsx';
-import JiscHeader from './components/JiscHeader/index.jsx';
-import JiscInfoBox from './components/JiscInfoBox/index.jsx';
-import JiscLogo from './components/JiscLogo/index.jsx';
-import JiscQuoteBox from './components/JiscQuoteBox/index.jsx';
-import JiscTitleBanner from './components/JiscTitleBanner/index.jsx';
-import JiscTopBox from './components/JiscTopBox/index.jsx';
+import JiscAWSLogo from './components/JiscAWSLogo';
+import JiscActionHeader from './components/JiscActionHeader';
+import JiscAzureLogo from './components/JiscAzureLogo';
+import JiscBoombox from './components/JiscBoombox';
+import JiscButton from './components/JiscButton';
+import JiscCoronaBanner from './components/JiscCoronaBanner';
+import JiscExpansionPanel from './components/JiscExpansionPanel';
+import JiscFeatureBox from './components/JiscFeatureBox';
+import JiscHeader from './components/JiscHeader';
+import JiscInfoBox from './components/JiscInfoBox';
+import JiscLoadingSpinner from './components/JiscLoadingSpinner';
+import JiscLogo from './components/JiscLogo';
+import JiscQuoteBox from './components/JiscQuoteBox';
+import JiscTitleBanner from './components/JiscTitleBanner';
+import JiscTopBox from './components/JiscTopBox';
 
-export {
-    theme,
-    JiscActionHeader,
-    JiscBoombox,
-    JiscButton,
-    JiscCoronaBanner,
-    JiscExpansionPanel,
-    JiscFeatureBox,
-    JiscHeader,
-    JiscInfoBox,
-    JiscLogo,
-    JiscQuoteBox,
-    JiscTitleBanner,
-    JiscTopBox
-};
+export { theme, JiscAWSLogo, JiscActionHeader, JiscAzureLogo, JiscBoombox, JiscButton, JiscCoronaBanner, JiscExpansionPanel, JiscFeatureBox, JiscHeader, JiscInfoBox, JiscLoadingSpinner, JiscLogo, JiscQuoteBox, JiscTitleBanner, JiscTopBox };

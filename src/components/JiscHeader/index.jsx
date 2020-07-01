@@ -4,7 +4,7 @@ import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/c
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import jiscTheme from '../../theme.js';
-import JiscLogo from '../JiscLogo/index.jsx';
+import JiscLogo from '../JiscLogo/index';
 
 const breakpoints = createBreakpoints({});
 
