@@ -22,7 +22,7 @@ const useStyles = ({ backgroundColor, color }) =>
         }
     }));
 
-const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition }) => {
+const JiscInfoBox = ({ imageUrl, imageAltText, children, backgroundColor, color, imagePosition }) => {
     const classes = useStyles({ backgroundColor, color })();
     return (
         <div className={classes.root}>
@@ -32,7 +32,7 @@ const JiscInfoBox = ({ imageUrl, children, backgroundColor, color, imagePosition
                         {children}
                     </Grid>
                     <Grid item lg={4} className={classes.marginAuto}>
-                        <img src={imageUrl} className={classes.image} alt='text box' />
+                        <img src={imageUrl} alt={imageAltText} className={classes.image} />
                     </Grid>
                 </Grid>
             </Container>
@@ -44,6 +44,7 @@ JiscInfoBox.propTypes = {
     backgroundColor: PropTypes.string,
     children: PropTypes.node.isRequired,
     color: PropTypes.string,
+    imageAltText: PropTypes.string,
     imagePosition: PropTypes.string,
     imageUrl: PropTypes.string
 };
@@ -51,6 +52,7 @@ JiscInfoBox.propTypes = {
 JiscInfoBox.defaultProps = {
     backgroundColor: 'transparent',
     color: 'textGrey',
+    imageAltText: 'connectivity services',
     imagePosition: 'right',
     imageUrl: 'https://innovation-components-images.s3-eu-west-1.amazonaws.com/humaaans/connectivity-services-needs.png'
 };

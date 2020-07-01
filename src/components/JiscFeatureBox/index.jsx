@@ -36,10 +36,17 @@ const useStyles = ({ backgroundImage, backgroundColor, color, imageHeight = '500
     });
 };
 
-const JiscFeatureBox = ({ backgroundColor, backgroundImage, children, color, imageHeight }) => {
+const JiscFeatureBox = ({ altTitle, backgroundColor, backgroundImage, children, color, imageHeight }) => {
     const classes = useStyles({ backgroundColor, backgroundImage, color, imageHeight })();
     return (
-        <Grid container direction='column' justify='flex-end' alignItems='flex-end' className={classes.imageContainer}>
+        <Grid
+            container
+            direction='column'
+            justify='flex-end'
+            alignItems='flex-end'
+            title={altTitle}
+            className={classes.imageContainer}
+        >
             <Grid item className={classes.textContainer}>
                 {children}
             </Grid>
@@ -48,6 +55,7 @@ const JiscFeatureBox = ({ backgroundColor, backgroundImage, children, color, ima
 };
 
 JiscFeatureBox.propTypes = {
+    altTitle: PropTypes.string,
     backgroundColor: PropTypes.string,
     backgroundImage: PropTypes.string,
     children: PropTypes.node.isRequired,
@@ -56,6 +64,7 @@ JiscFeatureBox.propTypes = {
 };
 
 JiscFeatureBox.defaultProps = {
+    altTitle: 'credit card background',
     backgroundColor: 'blue',
     backgroundImage: 'https://innovation-components-images.s3-eu-west-1.amazonaws.com/landscape/credit_card_inform.jpg',
     color: 'white',
