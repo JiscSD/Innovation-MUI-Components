@@ -6,7 +6,7 @@ import JiscButton from '../JiscButton/index.jsx';
 export default {
     component: JiscActionHeader,
     decorators: [withA11y],
-    title: 'JiscLoginHeader'
+    title: 'JiscActionHeader'
 };
 
 export const ActionHeader1 = () => (
