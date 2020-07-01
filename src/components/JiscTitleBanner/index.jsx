@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
-import { createBreakpoints } from '@material-ui/core/styles';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import jiscTheme from '../../theme.js';
 
 const breakpoints = createBreakpoints({});
