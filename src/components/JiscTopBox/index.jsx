@@ -69,7 +69,7 @@ JiscImageBanner.propTypes = {
 };
 
 JiscImageBanner.defaultProps = {
-    color: 'textGrey',
+    color: 'white',
     leftBackgroundColor: 'orange',
     leftImage: 'https://www.jisc.ac.uk/sites/default/files/node-transparent-8d1558.png',
     rightBackgroundColor: 'https://www.jisc.ac.uk/sites/default/files/connectivity-hero.jpg',
