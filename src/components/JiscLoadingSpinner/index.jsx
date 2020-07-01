@@ -6,18 +6,12 @@ import jiscTheme from '../../theme.js';
 
 const useStyles = ({ color }) =>
     makeStyles((theme) => ({
-        bottom: {
-            color: theme.palette.jisc.additionalGrey
-        },
-        circle: {
-            strokeLinecap: 'round'
-        },
         root: {},
         text: {
             color: theme.palette.jisc[color]
         },
         top: {
-            animationDuration: '550ms',
+            animationDuration: '850ms',
             color: theme.palette.jisc[color] || theme.palette.jisc.orange
         }
     }));
