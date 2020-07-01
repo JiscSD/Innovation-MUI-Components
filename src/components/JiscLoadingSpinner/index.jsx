@@ -36,13 +36,6 @@ const JiscLoadingSpinner = ({ title, color }) => {
             </Typography>
             <br />
             <div className={classes.root}>
-                {/* <CircularProgress
-                    variant='determinate'
-                    className={classes.bottom}
-                    size={60}
-                    thickness={4}
-                    value={100}
-                /> */}
                 <CircularProgress
                     variant='indeterminate'
                     disableShrink
