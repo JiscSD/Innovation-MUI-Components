@@ -16,7 +16,7 @@ const useStyles = ({ backgroundColor, backgroundImage, color, paddingChoice, bac
         }
     }));
 
-const JiscBoombox = ({ backgroundColor, color, backgroundImage, children, padding, backgroundCover }) => {
+const JiscBoombox = ({ altTitle, backgroundColor, color, backgroundImage, children, padding, backgroundCover }) => {
     const paddingSizes = {
         lg: 14,
         md: 10,
@@ -28,10 +28,15 @@ const JiscBoombox = ({ backgroundColor, color, backgroundImage, children, paddin
 
     const classes = useStyles({ backgroundColor, backgroundCover, backgroundImage, color, paddingChoice })();
 
-    return <div className={classes.root}>{children}</div>;
+    return (
+        <div title={altTitle} className={classes.root}>
+            {children}
+        </div>
+    );
 };
 
 JiscBoombox.propTypes = {
+    altTitle: PropTypes.string,
     backgroundColor: PropTypes.string,
     backgroundCover: PropTypes.bool,
     backgroundImage: PropTypes.string,
@@ -41,6 +46,7 @@ JiscBoombox.propTypes = {
 };
 
 JiscBoombox.defaultProps = {
+    altTitle: 'dark blue background',
     backgroundColor: 'orange',
     backgroundCover: true,
     backgroundImage: 'https://www.jisc.ac.uk/sites/default/files/abstract-blue-background-dark.jpg',

@@ -6,12 +6,13 @@ import jiscTheme from '../../theme.js';
 
 const useStyles = ({ color }) =>
     makeStyles((theme) => ({
-        root: {},
         text: {
+            // @ts-ignore
             color: theme.palette.jisc[color]
         },
         top: {
             animationDuration: '850ms',
+            // @ts-ignore
             color: theme.palette.jisc[color] || theme.palette.jisc.orange
         }
     }));
@@ -25,14 +26,11 @@ const JiscLoadingSpinner = ({ title, color }) => {
                 {title}
             </Typography>
             <br />
-            <div className={classes.root}>
+            <div>
                 <CircularProgress
                     variant='indeterminate'
                     disableShrink
                     className={classes.top}
-                    classes={{
-                        circle: classes.circle
-                    }}
                     size={50}
                     thickness={3}
                 />

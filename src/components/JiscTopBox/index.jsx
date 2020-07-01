@@ -35,7 +35,16 @@ const useStyles = ({ leftImage, rightImage, leftBackgroundColor, rightBackground
         }
     }));
 
-const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBackgroundColor, color, children }) => {
+const JiscImageBanner = ({
+    leftAltText,
+    leftImage,
+    rightAltText,
+    rightImage,
+    leftBackgroundColor,
+    rightBackgroundColor,
+    color,
+    children
+}) => {
     const classes = useStyles({
         color,
         leftBackgroundColor,
@@ -46,7 +55,7 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
 
     return (
         <Grid container className={classes.root}>
-            <Grid item md={6} xs={12} className={classes.containerLeft}>
+            <Grid item md={6} xs={12} className={classes.containerLeft} title={leftAltText}>
                 <Grid container>
                     <Grid item lg={4} xl={5} />
                     <Grid item xs={12} sm={12} md={12} lg={8} xl={7}>
@@ -54,7 +63,7 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item md={6} className={classes.containerRight} />
+            <Grid item md={6} className={classes.containerRight} title={rightAltText} />
         </Grid>
     );
 };
@@ -62,16 +71,20 @@ const JiscImageBanner = ({ leftImage, rightImage, leftBackgroundColor, rightBack
 JiscImageBanner.propTypes = {
     children: PropTypes.node.isRequired,
     color: PropTypes.string,
+    leftAltText: PropTypes.string,
     leftBackgroundColor: PropTypes.string,
     leftImage: PropTypes.string,
+    rightAltText: PropTypes.string,
     rightBackgroundColor: PropTypes.string,
     rightImage: PropTypes.string
 };
 
 JiscImageBanner.defaultProps = {
     color: 'white',
+    leftAltText: 'purple background with lines',
     leftBackgroundColor: 'orange',
     leftImage: 'https://www.jisc.ac.uk/sites/default/files/node-transparent-8d1558.png',
+    rightAltText: 'abstract background',
     rightBackgroundColor: 'https://www.jisc.ac.uk/sites/default/files/connectivity-hero.jpg',
     rightImage: 'white'
 };
