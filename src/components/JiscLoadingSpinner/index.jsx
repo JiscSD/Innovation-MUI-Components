@@ -12,17 +12,13 @@ const useStyles = ({ color }) =>
         circle: {
             strokeLinecap: 'round'
         },
-        root: {
-            // position: 'relative'
-        },
+        root: {},
         text: {
             color: theme.palette.jisc[color]
         },
         top: {
             animationDuration: '550ms',
             color: theme.palette.jisc[color] || theme.palette.jisc.orange
-            // left: 0,
-            // position: 'absolute'
         }
     }));
 
