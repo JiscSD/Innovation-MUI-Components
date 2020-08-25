@@ -4,7 +4,7 @@ import { makeStyles, Button, ThemeProvider } from '@material-ui/core';
 
 import jiscTheme from '../../theme.js';
 
-const useStyles = ({ color, backgroundColor }) =>
+const useStyles = ({ backgroundColor, color }) =>
     makeStyles((theme) => ({
         button: {
             '&:hover': {
@@ -19,9 +19,13 @@ const useStyles = ({ color, backgroundColor }) =>
     }));
 
 const JiscButton = (props) => {
-    const classes = useStyles(props)();
+    const { color, backgroundColor, ...otherProps } = props;
+    const classes = useStyles({
+        backgroundColor,
+        color
+    })();
 
-    return <Button variant='outlined' className={classes.button} {...props} />;
+    return <Button variant='outlined' className={classes.button} {...otherProps} />;
 };
 
 JiscButton.propTypes = {

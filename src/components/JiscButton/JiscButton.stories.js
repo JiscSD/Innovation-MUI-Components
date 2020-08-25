@@ -11,16 +11,6 @@ export default {
 export const Button1 = () => (
     <div
         style={{
-            padding: '4rem'
-        }}
-    >
-        <JiscButton outline='primary'>Click Me</JiscButton>
-    </div>
-);
-
-export const Button2 = () => (
-    <div
-        style={{
             backgroundColor: 'grey',
             padding: '4rem'
         }}
@@ -29,7 +19,7 @@ export const Button2 = () => (
     </div>
 );
 
-export const Button3 = () => (
+export const Button2 = () => (
     <div
         style={{
             padding: '4rem'
@@ -39,7 +29,7 @@ export const Button3 = () => (
     </div>
 );
 
-export const Button4 = () => (
+export const Button3 = () => (
     <div
         style={{
             backgroundColor: 'white',
@@ -62,8 +52,4 @@ Button2.story = {
 
 Button3.story = {
     name: 'JiscButton3'
-};
-
-Button4.story = {
-    name: 'JiscButton4'
 };
