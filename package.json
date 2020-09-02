@@ -1,6 +1,6 @@
 {
     "name": "jisc-innovation-mui-components",
-    "version": "0.5.1",
+    "version": "0.6.0",
     "main": "dist/",
     "private": false,
     "engines": {
@@ -26,6 +26,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "dist": "rm -rf dist && mkdir dist && node scripts/generateIndex.js && babel src/ -d dist --copy-files",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 9009 -s public",
@@ -58,7 +59,6 @@
         "@storybook/preset-create-react-app": "*",
         "@storybook/react": "^6.0.16",
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.7.0",
         "eslint-config-airbnb": "^18.2.0",
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-import": "^2.21.2",
