@@ -28,19 +28,20 @@ const useStyles = ({ backgroundColor, color }) =>
         text: {
             color: theme.palette.jisc[color] || theme.palette.jisc.white,
             marginLeft: theme.spacing(1),
+            marginTop: 0,
             [breakpoints.up('sm')]: {
                 marginLeft: theme.spacing(10)
             }
         }
     }));
 
-const JiscTitleBanner = ({ backgroundColor, color, title }) => {
+const JiscTitleBanner = ({ backgroundColor, color, title, variant }) => {
     const classes = useStyles({ backgroundColor, color })();
 
     return (
         <div className={classes.root}>
             <Container className={classes.container}>
-                <Typography variant='h3' className={classes.text}>
+                <Typography variant={variant} className={classes.text}>
                     {title}
                 </Typography>
             </Container>
@@ -51,12 +52,14 @@ const JiscTitleBanner = ({ backgroundColor, color, title }) => {
 JiscTitleBanner.propTypes = {
     backgroundColor: PropTypes.string,
     color: PropTypes.string,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    variant: PropTypes.string
 };
 
 JiscTitleBanner.defaultProps = {
     backgroundColor: 'orange',
-    color: 'white'
+    color: 'white',
+    variant: 'h3'
 };
 
 export default (props) => {
