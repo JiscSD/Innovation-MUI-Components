@@ -48,6 +48,9 @@ const theme = createMuiTheme({
             }
         },
         MuiTypography: {
+            gutterBottom: {
+                marginBottom: '1rem'
+            },
             h1: {
                 marginTop: '1.6875rem'
             },
