@@ -7,6 +7,14 @@ import jiscTheme from '../../theme.js';
 const useStyles = ({ backgroundColor, color }) =>
     makeStyles((theme) => ({
         button: {
+            '&:active': {
+                outline: 'solid #fd6',
+                textDecoration: 'underline'
+            },
+            '&:focus': {
+                outline: 'solid #fd6',
+                textDecoration: 'none'
+            },
             '&:hover': {
                 backgroundColor: theme.palette.primary.main,
                 borderColor: theme.palette.primary.main,
