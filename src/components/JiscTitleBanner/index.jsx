@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, Typography, Container, ThemeProvider } from '@material-ui/core';
+import { makeStyles, Container, ThemeProvider } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import jiscTheme from '../../theme.js';
 
@@ -34,15 +34,13 @@ const useStyles = ({ backgroundColor, color }) =>
         }
     }));
 
-const JiscTitleBanner = ({ backgroundColor, color, title }) => {
+const JiscTitleBanner = ({ backgroundColor, color, children }) => {
     const classes = useStyles({ backgroundColor, color })();
 
     return (
         <div className={classes.root}>
             <Container className={classes.container}>
-                <Typography variant='h3' className={classes.text}>
-                    {title}
-                </Typography>
+                <Container className={classes.text}>{children}</Container>
             </Container>
         </div>
     );
@@ -50,8 +48,8 @@ const JiscTitleBanner = ({ backgroundColor, color, title }) => {
 
 JiscTitleBanner.propTypes = {
     backgroundColor: PropTypes.string,
-    color: PropTypes.string,
-    title: PropTypes.string.isRequired
+    children: PropTypes.node.isRequired,
+    color: PropTypes.string
 };
 
 JiscTitleBanner.defaultProps = {
