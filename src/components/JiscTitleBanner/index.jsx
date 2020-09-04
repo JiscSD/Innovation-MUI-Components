@@ -28,6 +28,7 @@ const useStyles = ({ backgroundColor, color }) =>
         text: {
             color: theme.palette.jisc[color] || theme.palette.jisc.white,
             marginLeft: theme.spacing(1),
+            marginTop: 0,
             [breakpoints.up('sm')]: {
                 marginLeft: theme.spacing(10)
             }
