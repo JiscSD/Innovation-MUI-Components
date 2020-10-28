@@ -6,6 +6,16 @@ const breakpoints = createBreakpoints({});
 
 const theme = createMuiTheme({
     overrides: {
+    	MuiCssBaseline: {
+	    '@global': {
+		html: {
+		    height: '100%'
+		},
+		body: {
+		    height: '100%',
+		}
+	    }
+	},
         MuiLink: {
             root: {
                 '&:active': {
