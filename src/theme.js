@@ -20,19 +20,19 @@ const theme = createMuiTheme({
             root: {
                 '&:active': {
                     backgroundColor: '#fd6',
-                    color: '#007aaa',
+                    color: '#00557F',
                     outline: 'solid #fd6',
                     textDecoration: 'underline'
                 },
                 '&:focus': {
                     backgroundColor: '#fd6',
-                    color: '#007aaa',
+                    color: '#00557F',
                     outline: 'solid #fd6',
                     textDecoration: 'none'
                 },
                 '&:focus:hover': {
                     backgroundColor: '#fd6',
-                    color: '#007aaa',
+                    color: '#00557F',
                     outline: 'solid #fd6',
                     textDecoration: 'underline'
                 },
@@ -58,11 +58,8 @@ const theme = createMuiTheme({
             }
         },
         MuiTypography: {
-            h1: {
-                marginTop: '1.6875rem'
-            },
-            h2: {
-                marginTop: '1.25rem'
+            gutterBottom: {
+                marginBottom: '1rem'
             },
             paragraph: {
                 marginBottom: '1.6875rem'
