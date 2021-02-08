@@ -35,7 +35,7 @@ export {
     JiscH1,
     JiscH2,
     JiscHeader,
-     JiscIBMLogo
+    JiscIBMLogo,
     JiscInfoBox,
     JiscLoadingSpinner,
     JiscLogo,
