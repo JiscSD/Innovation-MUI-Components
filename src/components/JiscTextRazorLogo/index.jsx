@@ -6,7 +6,6 @@ const JiscTextRazorLogo = ({ height }) => {
         <svg 
             version="1.0" 
             xmlns="http://www.w3.org/2000/svg"
-            width={height*5.625}
             height={height} 
             viewBox="0 0 405.000000 72.000000"
             preserveAspectRatio="xMidYMid meet"
