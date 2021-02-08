@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
             borderColor: theme.palette.primary.main,
             color: theme.palette.jisc.orange
         },
-        color: theme.palette.jisc.blue
+        color: theme.palette.jisc.primary
     },
     root: {
         '&:last-of-type $panel': {
