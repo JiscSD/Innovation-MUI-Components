@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         order: -1
     },
     panel: {
-        borderBottom: `1px solid ${theme.palette.jisc.midGrey}`,
         borderTop: `1px solid ${theme.palette.jisc.midGrey}`
     },
     title: {
@@ -34,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
             color: theme.palette.jisc.orange
         },
         color: theme.palette.jisc.blue
+    },
+    root: {
+        '&:last-of-type $panel': {
+            borderBottom: `1px solid ${theme.palette.jisc.midGrey}`
+        }
     }
 }));
 
@@ -41,7 +45,7 @@ const JiscExpansionPanel = ({ title, children }) => {
     const classes = useStyles();
 
     return (
-        <Container maxWidth='md'>
+        <Container maxWidth='md' className={classes.root}>
             <ExpansionPanel square elevation={0} className={classes.panel}>
                 <ExpansionPanelSummary
                     IconButtonProps={{ edge: 'start' }}
