@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {
     makeStyles,
     ThemeProvider,
-    ExpansionPanel,
-    ExpansionPanelSummary,
-    ExpansionPanelDetails,
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
     Typography,
     Container
 } from '@material-ui/core';
@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         order: -1
     },
     panel: {
-        borderBottom: `1px solid ${theme.palette.jisc.midGrey}`,
         borderTop: `1px solid ${theme.palette.jisc.midGrey}`
     },
     title: {
@@ -33,7 +32,12 @@ const useStyles = makeStyles((theme) => ({
             borderColor: theme.palette.primary.main,
             color: theme.palette.jisc.orange
         },
-        color: theme.palette.jisc.blue
+        color: theme.palette.jisc.primary
+    },
+    root: {
+        '&:last-of-type $panel': {
+            borderBottom: `1px solid ${theme.palette.jisc.midGrey}`
+        }
     }
 }));
 
@@ -41,21 +45,21 @@ const JiscExpansionPanel = ({ title, children }) => {
     const classes = useStyles();
 
     return (
-        <Container maxWidth='md'>
-            <ExpansionPanel square elevation={0} className={classes.panel}>
-                <ExpansionPanelSummary
+        <Container className={classes.root}>
+            <Accordion square elevation={0} className={classes.panel}>
+                <AccordionSummary
                     IconButtonProps={{ edge: 'start' }}
                     classes={{ expanded: classes.expanded, expandIcon: classes.expandIcon }}
                     expandIcon={<ExpandMoreIcon />}
                 >
-                    <Typography className={classes.title} variant='body2'>
+                    <Typography className={classes.title} variant='h4'>
                         {title}
                     </Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={`${classes.expanded} ${classes.details} `}>
+                </AccordionSummary>
+                <AccordionDetails className={`${classes.expanded} ${classes.details} `}>
                     {children}
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+                </AccordionDetails>
+            </Accordion>
         </Container>
     );
 };
