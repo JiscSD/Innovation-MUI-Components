@@ -52,7 +52,7 @@ const JiscExpansionPanel = ({ title, children }) => {
                     classes={{ expanded: classes.expanded, expandIcon: classes.expandIcon }}
                     expandIcon={<ExpandMoreIcon />}
                 >
-                    <Typography className={classes.title} variant='body2'>
+                    <Typography className={classes.title} variant='h4'>
                         {title}
                     </Typography>
                 </AccordionSummary>
