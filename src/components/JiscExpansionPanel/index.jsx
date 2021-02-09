@@ -45,7 +45,7 @@ const JiscExpansionPanel = ({ title, children }) => {
     const classes = useStyles();
 
     return (
-        <Container maxWidth='md' className={classes.root}>
+        <Container className={classes.root}>
             <Accordion square elevation={0} className={classes.panel}>
                 <AccordionSummary
                     IconButtonProps={{ edge: 'start' }}
