@@ -6,8 +6,7 @@ import {
     Accordion,
     AccordionDetails,
     AccordionSummary,
-    Typography,
-    Container
+    Typography
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -59,7 +58,7 @@ const JiscExpansionPanel = ({ title, children }) => {
     const classes = useStyles();
 
     return (
-        <Container className={classes.root}>
+        <div className={classes.root}>
             <Accordion square elevation={0} className={classes.panel}>
                 <AccordionSummary
                     IconButtonProps={{ edge: 'start' }}
@@ -75,7 +74,7 @@ const JiscExpansionPanel = ({ title, children }) => {
                     {children}
                 </AccordionDetails>
             </Accordion>
-        </Container>
+        </div>
     );
 };
 
