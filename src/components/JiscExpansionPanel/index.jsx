@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {
     makeStyles,
     ThemeProvider,
-    ExpansionPanel,
-    ExpansionPanelSummary,
-    ExpansionPanelDetails,
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
     Typography,
     Container
 } from '@material-ui/core';
@@ -46,8 +46,8 @@ const JiscExpansionPanel = ({ title, children }) => {
 
     return (
         <Container maxWidth='md' className={classes.root}>
-            <ExpansionPanel square elevation={0} className={classes.panel}>
-                <ExpansionPanelSummary
+            <Accordion square elevation={0} className={classes.panel}>
+                <AccordionSummary
                     IconButtonProps={{ edge: 'start' }}
                     classes={{ expanded: classes.expanded, expandIcon: classes.expandIcon }}
                     expandIcon={<ExpandMoreIcon />}
@@ -55,11 +55,11 @@ const JiscExpansionPanel = ({ title, children }) => {
                     <Typography className={classes.title} variant='body2'>
                         {title}
                     </Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={`${classes.expanded} ${classes.details} `}>
+                </AccordionSummary>
+                <AccordionDetails className={`${classes.expanded} ${classes.details} `}>
                     {children}
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+                </AccordionDetails>
+            </Accordion>
         </Container>
     );
 };
