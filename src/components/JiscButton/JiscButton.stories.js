@@ -64,7 +64,7 @@ export const Button5 = () => (
             padding: '4rem'
         }}
     >
-        <JiscButton backgroundColor='indigo' color='white' selected selectedBackgroundColor='maroon'>
+        <JiscButton backgroundColor='indigo' color='white' selectedBackgroundColor='maroon' selectedTextColor='orange'>
             Click Me
         </JiscButton>
     </div>

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import jiscTheme from '../../theme.js';
 
-const useStyles = ({ backgroundColor, color, selectedBackgroundColor }) =>
+const useStyles = ({ backgroundColor, color, selectedBackgroundColor, selectedTextColor }) =>
     makeStyles((theme) => ({
         button: {
             '&:hover': {
@@ -16,10 +16,12 @@ const useStyles = ({ backgroundColor, color, selectedBackgroundColor }) =>
             '&:active': {
                 backgroundColor: theme.palette.jisc[selectedBackgroundColor],
                 borderColor: theme.palette.jisc[selectedBackgroundColor],
+                color: theme.palette.jisc[selectedTextColor] || theme.palette.jisc[color]
             },
             '&:focus': {
                 backgroundColor: theme.palette.jisc[selectedBackgroundColor],
                 borderColor: theme.palette.jisc[selectedBackgroundColor],
+                color: theme.palette.jisc[selectedTextColor] || theme.palette.jisc[color]
             },
             backgroundColor: theme.palette.jisc[backgroundColor] || '',
             borderColor: theme.palette.jisc[color] || theme.palette.jisc.white,
@@ -28,15 +30,17 @@ const useStyles = ({ backgroundColor, color, selectedBackgroundColor }) =>
         selected: {
             backgroundColor: theme.palette.jisc[selectedBackgroundColor],
             borderColor: theme.palette.jisc[selectedBackgroundColor],
+            color: theme.palette.jisc[selectedTextColor] || theme.palette.jisc[color]
         }
     }));
 
 const JiscButton = (props) => {
-    const { color, backgroundColor, selected, selectedBackgroundColor, ...otherProps } = props;
+    const { color, backgroundColor, selected, selectedBackgroundColor, selectedTextColor,...otherProps } = props;
     const classes = useStyles({
         backgroundColor,
         color,
-        selectedBackgroundColor
+        selectedBackgroundColor,
+        selectedTextColor
     })();
 
     return <Button variant='outlined' className={clsx(classes.button, selected && classes.selected)} {...otherProps} />;
@@ -46,14 +50,16 @@ JiscButton.propTypes = {
     backgroundColor: PropTypes.string,
     color: PropTypes.string,
     selected: PropTypes.bool,
-    selectedBackgroundColor: PropTypes.string
+    selectedBackgroundColor: PropTypes.string,
+    selectedTextColor: PropTypes.string
 };
 
 JiscButton.defaultProps = {
     backgroundColor: '',
     color: 'white',
     selected: false,
-    selectedBackgroundColor: 'orange'
+    selectedBackgroundColor: 'orange',
+    selectedTextColor: ''
 };
 
 export default (props) => {
