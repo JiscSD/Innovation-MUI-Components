@@ -25,7 +25,9 @@ export const Button2 = () => (
             padding: '4rem'
         }}
     >
-        <JiscButton color='orange'>Click Me</JiscButton>
+        <JiscButton color='orange' selectedBackgroundColor='darkGrey'>
+            Click Me
+        </JiscButton>
     </div>
 );
 
@@ -62,7 +64,7 @@ export const Button5 = () => (
             padding: '4rem'
         }}
     >
-        <JiscButton backgroundColor='indigo' color='white' selected selectedColor='maroon'>
+        <JiscButton backgroundColor='indigo' color='white' selected selectedBackgroundColor='maroon'>
             Click Me
         </JiscButton>
     </div>
