@@ -27,6 +27,11 @@ const useStyles = ({ backgroundColor, color, selectedBackgroundColor, selectedTe
             borderColor: theme.palette.jisc[color] || theme.palette.jisc.white,
             color: theme.palette.jisc[color] || theme.palette.jisc.white
         },
+        root: {
+            '&:disabled': {
+                backgroundColor: '#e4e4e4'
+            }
+        },
         selected: {
             backgroundColor: theme.palette.jisc[selectedBackgroundColor],
             borderColor: theme.palette.jisc[selectedBackgroundColor],
@@ -35,7 +40,7 @@ const useStyles = ({ backgroundColor, color, selectedBackgroundColor, selectedTe
     }));
 
 const JiscButton = (props) => {
-    const { color, backgroundColor, selected, selectedBackgroundColor, selectedTextColor,...otherProps } = props;
+    const { color, backgroundColor, selected, selectedBackgroundColor, selectedTextColor, ...otherProps } = props;
     const classes = useStyles({
         backgroundColor,
         color,
@@ -43,7 +48,14 @@ const JiscButton = (props) => {
         selectedTextColor
     })();
 
-    return <Button variant='outlined' className={clsx(classes.button, selected && classes.selected)} {...otherProps} />;
+    return (
+        <Button
+            variant='outlined'
+            classes={{ root: classes.root }}
+            className={clsx(classes.button, selected && classes.selected)}
+            {...otherProps}
+        />
+    );
 };
 
 JiscButton.propTypes = {

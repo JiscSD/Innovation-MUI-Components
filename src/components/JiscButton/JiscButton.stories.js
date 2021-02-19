@@ -70,6 +70,19 @@ export const Button5 = () => (
     </div>
 );
 
+export const Button6 = () => (
+    <div
+        style={{
+            backgroundColor: 'white',
+            padding: '4rem'
+        }}
+    >
+        <JiscButton backgroundColor='indigo' color='white' disabled>
+            Click Me
+        </JiscButton>
+    </div>
+);
+
 Button1.story = {
     name: 'JiscButton1'
 };
@@ -88,4 +101,8 @@ Button4.story = {
 
 Button5.story = {
     name: 'JiscButton5'
+};
+
+Button6.story = {
+    name: 'JiscButton6'
 };
