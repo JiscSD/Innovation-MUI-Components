@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import jiscTheme from '../../theme.js';
 
-const useStyles = ({ backgroundColor, color, selectedBackgroundColor, selectedTextColor }) =>
+const useStyles = ({ backgroundColor, color, selectedBackgroundColor, selectedTextColor, fullWidth }) =>
     makeStyles((theme) => ({
         button: {
             '&:hover': {
@@ -25,7 +25,8 @@ const useStyles = ({ backgroundColor, color, selectedBackgroundColor, selectedTe
             },
             backgroundColor: theme.palette.jisc[backgroundColor] || '',
             borderColor: theme.palette.jisc[color] || theme.palette.jisc.white,
-            color: theme.palette.jisc[color] || theme.palette.jisc.white
+            color: theme.palette.jisc[color] || theme.palette.jisc.white,
+            width: fullWidth ? '100%' : ''
         },
         root: {
             '&:disabled': {
@@ -61,6 +62,7 @@ const JiscButton = (props) => {
 JiscButton.propTypes = {
     backgroundColor: PropTypes.string,
     color: PropTypes.string,
+    fullWidth: PropTypes.bool,
     selected: PropTypes.bool,
     selectedBackgroundColor: PropTypes.string,
     selectedTextColor: PropTypes.string
@@ -69,6 +71,7 @@ JiscButton.propTypes = {
 JiscButton.defaultProps = {
     backgroundColor: '',
     color: 'white',
+    fullWidth: false,
     selected: false,
     selectedBackgroundColor: 'orange',
     selectedTextColor: ''
