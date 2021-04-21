@@ -18,16 +18,16 @@ jobs:
             - name: Build
               run: npm run build-storybook
 
-            # - name: Deploy
-            #   uses: jakejarvis/s3-sync-action@v0.5.1
-            #   with:
-            #       args: --acl public-read --follow-symlinks --delete
-            #   env:
-            #       SOURCE_DIR: 'storybook-static/'
-            #       AWS_REGION: 'eu-west-1'
-            #       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            #       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            #       AWS_S3_BUCKET: ${{ secrets.AWS_DEV_BUCKET }}
+            - name: Deploy
+              uses: jakejarvis/s3-sync-action@v0.5.1
+              with:
+                  args: --acl public-read --follow-symlinks --delete
+              env:
+                  SOURCE_DIR: 'storybook-static/'
+                  AWS_REGION: 'eu-west-1'
+                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  AWS_S3_BUCKET: ${{ secrets.AWS_DEV_BUCKET }}
 
             - name: Deploy & CloudFront invalidation (new AWS account)
               env:
@@ -36,5 +36,5 @@ jobs:
                   AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_NEW }}
                   AWS_REGION: 'eu-west-2'
               run: |
-                  aws s3 sync storybook-static s3://AWS_S3_BUCKET --delete
+                  aws s3 sync storybook-static s3://$AWS_S3_BUCKET --delete
                   aws cloudfront create-invalidation --distribution-id EZL6PC41U6Q8Z
