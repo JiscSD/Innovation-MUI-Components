@@ -1,6 +1,6 @@
 name: Deploy to dev
 
-on: 
+on:
     push:
         branches:
             - master
@@ -11,7 +11,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v1
-            
+
             - name: Install Dependencies
               run: npm install
 
@@ -28,3 +28,13 @@ jobs:
                   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
                   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                   AWS_S3_BUCKET: ${{ secrets.AWS_DEV_BUCKET }}
+
+            - name: Deploy & CloudFront invalidation (new AWS account)
+              env:
+                  AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID_NEW }}
+                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_NEW }}
+                  AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_NEW }}
+                  AWS_REGION: 'eu-west-2'
+              run: |
+                  aws s3 sync storybook-static s3://AWS_S3_BUCKET --delete
+                  aws cloudfront create-invalidation --distribution-id EZL6PC41U6Q8Z
