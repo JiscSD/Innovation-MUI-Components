@@ -31,7 +31,7 @@ jobs:
 
             - name: Deploy & CloudFront invalidation (new AWS account)
               env:
-                  AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID_NEW }}
+                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_NEW }}
                   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_NEW }}
                   AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_NEW }}
                   AWS_REGION: 'eu-west-2'
