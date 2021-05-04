@@ -14,6 +14,7 @@ import JiscH2 from './components/JiscH2';
 import JiscHeader from './components/JiscHeader';
 import JiscIBMLogo from './components/JiscIBMLogo';
 import JiscInfoBox from './components/JiscInfoBox';
+import JiscList from './components/JiscList';
 import JiscLoadingSpinner from './components/JiscLoadingSpinner';
 import JiscLogo from './components/JiscLogo';
 import JiscQuoteBox from './components/JiscQuoteBox';
@@ -37,6 +38,7 @@ export {
     JiscHeader,
     JiscIBMLogo,
     JiscInfoBox,
+    JiscList,
     JiscLoadingSpinner,
     JiscLogo,
     JiscQuoteBox,
