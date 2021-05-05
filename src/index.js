@@ -5,6 +5,9 @@ import JiscActionHeader from './components/JiscActionHeader';
 import JiscAzureLogo from './components/JiscAzureLogo';
 import JiscBoombox from './components/JiscBoombox';
 import JiscButton from './components/JiscButton';
+import JiscCard from './components/JiscCard';
+import JiscCardRow from './components/JiscCardRow';
+import JiscTextExample from './components/JiscTextExample';
 import JiscCoronaBanner from './components/JiscCoronaBanner';
 import JiscExpansionPanel from './components/JiscExpansionPanel';
 import JiscFeatureBox from './components/JiscFeatureBox';
@@ -29,8 +32,11 @@ export {
     JiscAzureLogo,
     JiscBoombox,
     JiscButton,
+    JiscCard,
+    JiscCardRow,
     JiscCoronaBanner,
     JiscExpansionPanel,
+    JiscTextExample,
     JiscFeatureBox,
     JiscGoogleLogo,
     JiscH1,

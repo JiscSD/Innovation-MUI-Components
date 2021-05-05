@@ -9,7 +9,6 @@ export default {
     title: 'JiscList'
 };
 
-
 export const ListStyle1 = () => (
     <JiscList
     
