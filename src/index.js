@@ -5,6 +5,9 @@ import JiscActionHeader from './components/JiscActionHeader';
 import JiscAzureLogo from './components/JiscAzureLogo';
 import JiscBoombox from './components/JiscBoombox';
 import JiscButton from './components/JiscButton';
+import JiscCard from './components/JiscCard';
+import JiscCardRow from './components/JiscCardRow';
+import JiscTextExample from './components/JiscTextExample';
 import JiscCoronaBanner from './components/JiscCoronaBanner';
 import JiscExpansionPanel from './components/JiscExpansionPanel';
 import JiscFeatureBox from './components/JiscFeatureBox';
@@ -14,6 +17,7 @@ import JiscH2 from './components/JiscH2';
 import JiscHeader from './components/JiscHeader';
 import JiscIBMLogo from './components/JiscIBMLogo';
 import JiscInfoBox from './components/JiscInfoBox';
+import JiscList from './components/JiscList';
 import JiscLoadingSpinner from './components/JiscLoadingSpinner';
 import JiscLogo from './components/JiscLogo';
 import JiscQuoteBox from './components/JiscQuoteBox';
@@ -28,8 +32,11 @@ export {
     JiscAzureLogo,
     JiscBoombox,
     JiscButton,
+    JiscCard,
+    JiscCardRow,
     JiscCoronaBanner,
     JiscExpansionPanel,
+    JiscTextExample,
     JiscFeatureBox,
     JiscGoogleLogo,
     JiscH1,
@@ -37,6 +44,7 @@ export {
     JiscHeader,
     JiscIBMLogo,
     JiscInfoBox,
+    JiscList,
     JiscLoadingSpinner,
     JiscLogo,
     JiscQuoteBox,
