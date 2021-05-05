@@ -8,7 +8,7 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
     return makeStyles((theme) => {
         return {
             cardRow: {
-                boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.13)',
+                boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.13)'
             },
             imageContainer: {
                 backgroundColor: theme.palette.jisc[backgroundColor],
@@ -17,89 +17,97 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 width: '30%',
-                position:'relative',
-                padding:0,
-                display: 'inherit',
+                position: 'relative',
+                padding: '0px',
+                display: 'inherit'
             },
             textContainer: {
                 fontSize: 16,
-                paddingTop: 15,
-                paddingLeft: 24,
+                paddingTop: '15px',
+                paddingLeft: '24px'
             },
             cardTitle: {
                 color: '#181818',
                 textAlign: 'left',
                 fontWeight: 'bold',
-                fontSize: 15,
+                fontSize: 15
             },
             cardText: {
                 color: '#181818',
                 textAlign: 'left',
-                fontSize: 13,
+                fontSize: 13
             },
             version2: {
-                padding:20,
-                "& img": {
-                    borderRadius:10
+                padding: '20px',
+                '& img': {
+                    borderRadius: 10
                 },
-                "& $textContainer": {
-                    paddingTop:0
+                '& $textContainer': {
+                    paddingTop: 0
                 }
             },
             version3: {
-                "& $imageContainer": {
-                    maxWidth:'70%',
-                    width:'70%',
-                    flexBasis:'70%',
+                '& $imageContainer': {
+                    maxWidth: '70%',
+                    width: '70%',
+                    flexBasis: '70%'
                 },
-                "& $textContainer": {
-                    maxWidth:'30%',
-                    width:'24%',
+                '& $textContainer': {
+                    maxWidth: '30%',
+                    width: '24%',
                     padding: '3%',
-                    flexBasis:'30%',
+                    flexBasis: '30%'
                 }
             },
             version4: {
-                "& $imageContainer": {
-                    maxWidth:'70%',
-                    width:'70%',
+                '& $imageContainer': {
+                    maxWidth: '70%',
+                    width: '70%',
                     position: 'relative',
-                    left:'30%',
-                    flexBasis:'70%',
+                    left: '30%',
+                    flexBasis: '70%'
                 },
-                "& $textContainer": {
-                    maxWidth:'30%',
-                    width:'24%',
+                '& $textContainer': {
+                    maxWidth: '30%',
+                    width: '24%',
                     position: 'relative',
-                    right:'70%',
+                    right: '70%',
                     padding: '3%',
-                    flexBasis:'30%',
+                    flexBasis: '30%'
                 }
             }
         };
     });
 };
 
-const JiscCardRow = ({ exampleText, cardText, cardCategory, backgroundColor, backgroundImage, cardTitle, color, imageHeight }) => {
-    const classes = useStyles({ backgroundColor, backgroundImage, color, imageHeight })();  
+const JiscCardRow = ({
+    exampleText,
+    cardText,
+    cardCategory,
+    backgroundColor,
+    backgroundImage,
+    cardTitle,
+    color,
+    imageHeight
+}) => {
+    const classes = useStyles({ backgroundColor, backgroundImage, color, imageHeight })();
 
     return (
         <Container maxWidth='md'>
-        <Grid
-            container
-            className={[classes.cardRow, classes[`${cardCategory}`]].join(' ')} >
-            <Grid item xs={4} className={classes.imageContainer}><img className={classes.cardImage} width='100%' src={exampleText} /></Grid>
-            <Grid item xs={8} className={classes.textContainer}>
-                <Typography className={classes.cardTitle}>{cardTitle}</Typography>
-                <Typography className={classes.cardText}>{cardText}</Typography>
+            <Grid container className={[classes.cardRow, classes[`${cardCategory}`]].join(' ')}>
+                <Grid item xs={4} className={classes.imageContainer}>
+                    <img className={classes.cardImage} width='100%' src={exampleText} />
+                </Grid>
+                <Grid item xs={8} className={classes.textContainer}>
+                    <Typography className={classes.cardTitle}>{cardTitle}</Typography>
+                    <Typography className={classes.cardText}>{cardText}</Typography>
+                </Grid>
             </Grid>
-        </Grid>
         </Container>
     );
 };
 
 JiscCardRow.propTypes = {
-    altTitle: PropTypes.string,
     cardTitle: PropTypes.string,
     cardText: PropTypes.string,
     cardImage: PropTypes.string,
@@ -113,7 +121,6 @@ JiscCardRow.propTypes = {
 };
 
 JiscCardRow.defaultProps = {
-    altTitle: 'credit card background',
     backgroundColor: '#fff',
     color: 'white',
     imageHeight: '400px'

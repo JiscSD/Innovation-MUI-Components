@@ -14,8 +14,7 @@ export const JiscCardStandard = () => (
         cardTitle='Essay Feedback'
         cardText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='version1'
-    >
-    </JiscCardRow>
+    ></JiscCardRow>
 );
 
 export const JiscCardPadding = () => (
@@ -24,8 +23,7 @@ export const JiscCardPadding = () => (
         cardTitle='Essay Feedback'
         cardText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='version2'
-    >
-    </JiscCardRow>
+    ></JiscCardRow>
 );
 
 export const JiscBigImageLeft = () => (
@@ -34,8 +32,7 @@ export const JiscBigImageLeft = () => (
         cardTitle='Essay Feedback'
         cardText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='version3'
-    >
-    </JiscCardRow>
+    ></JiscCardRow>
 );
 
 export const JiscBigImageRight = () => (
@@ -44,12 +41,5 @@ export const JiscBigImageRight = () => (
         cardTitle='Essay Feedback'
         cardText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='version4'
-    >
-    </JiscCardRow>
+    ></JiscCardRow>
 );
-
-
-
-
-
-

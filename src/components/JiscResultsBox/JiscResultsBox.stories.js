@@ -13,8 +13,7 @@ export const PositiveResult = () => (
         exampleText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='positive'
         exampleTextType='Essay Feedback'
-    >
-    </JiscResultsBox>
+    ></JiscResultsBox>
 );
 
 export const DefaultResult = () => (
@@ -22,8 +21,7 @@ export const DefaultResult = () => (
         exampleText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='neutral'
         exampleTextType='Essay Feedback'
-    >
-    </JiscResultsBox>
+    ></JiscResultsBox>
 );
 
 export const NegativeResult = () => (
@@ -31,10 +29,5 @@ export const NegativeResult = () => (
         exampleText='Is scanning lawful? Sounds as if it ought to be a straightforward question with a simple answer. However investigating it turns out to be a good illustration of how tricky it is to apply real-world an….'
         cardCategory='negative'
         exampleTextType='Essay Feedback'
-    >
-    </JiscResultsBox>
+    ></JiscResultsBox>
 );
-
-
-
-

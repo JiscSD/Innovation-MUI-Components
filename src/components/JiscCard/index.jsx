@@ -8,42 +8,41 @@ const useStyles = ({ backgroundColor }) => {
     return makeStyles((theme) => {
         return {
             root: {
-                backgroundColor: '#f40',
+                backgroundColor: '#f40'
             },
             card: {
-                maxWidth:'35vw'
+                maxWidth: '35vw'
             },
             style2: {
-                "& .MuiCardContent-root": {
+                '& .MuiCardContent-root': {
                     backgroundColor: '#37444D',
                     color: 'white',
-                    "& p": {
+                    '& p': {
                         color: 'white'
-                    },
+                    }
                 },
-                "& .MuiCardActions-root": {
+                '& .MuiCardActions-root': {
                     backgroundColor: '#445560;',
-                    "& button": {
-                        color:'white'
+                    '& button': {
+                        color: 'white'
                     }
                 }
             },
             style3: {
                 position: 'relative',
-                "& .MuiCardMedia-root": {
-                },
-                "& .MuiCardContent-root": {
+                '& .MuiCardMedia-root': {},
+                '& .MuiCardContent-root': {
                     backgroundColor: 'rgba(0,0,0,0.6)',
                     color: 'white',
-                    "& p": {
+                    '& p': {
                         color: 'white'
-                    },
+                    }
                 },
-                "& .MuiCardActions-root": {
+                '& .MuiCardActions-root': {
                     backgroundColor: '#ccc',
                     backgroundColor: 'rgba(0,0,0,0.6)',
-                    "& button": {
-                        color:'white'
+                    '& button': {
+                        color: 'white'
                     }
                 }
             }
@@ -52,17 +51,9 @@ const useStyles = ({ backgroundColor }) => {
 };
 
 const JiscCard = ({ children, cardCategory, backgroundColor, backgroundImage, color, imageHeight }) => {
-    const classes = useStyles({ backgroundColor, backgroundImage, color, imageHeight })();  
+    const classes = useStyles({ backgroundColor, backgroundImage, color, imageHeight })();
 
-    return (
-
-        <Card className={[classes.card, classes[`${cardCategory}`]].join(' ')} >
-
-            {children}
-
-        </Card>
-       
-    );
+    return <Card className={[classes.card, classes[`${cardCategory}`]].join(' ')}>{children}</Card>;
 };
 
 JiscCard.propTypes = {

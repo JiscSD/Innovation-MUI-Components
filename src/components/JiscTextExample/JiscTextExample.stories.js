@@ -15,19 +15,17 @@ export const EssayFeedback = () => (
         exampleTextType='Essay Feedback'
         showEssay
         showAction
-    >
-    </JiscTextExample>
+    ></JiscTextExample>
 );
 
 export const Tweet = () => (
-    <JiscTextExample  
+    <JiscTextExample
         exampleText='"Amazing piece of work from @Jisc working with publishers…"'
         cardCategory='twitter'
         exampleTextType='Example Tweet'
         showTwitter
         showAction
-    >
-    </JiscTextExample>
+    ></JiscTextExample>
 );
 
 export const FilmReview = () => (
@@ -37,8 +35,7 @@ export const FilmReview = () => (
         exampleTextType='Film Review'
         showFilm
         showAction
-    >
-    </JiscTextExample>
+    ></JiscTextExample>
 );
 
 export const Custom = () => (
@@ -47,10 +44,5 @@ export const Custom = () => (
         exampleTextType='Example Text'
         backgroundImage='https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80'
         showAction
-    >
-    </JiscTextExample>
+    ></JiscTextExample>
 );
-
-
-
-
