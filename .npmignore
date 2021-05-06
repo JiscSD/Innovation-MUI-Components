@@ -2,3 +2,5 @@ node_modules
 .github
 src
 .storybook
+terraform
+storybook-static
