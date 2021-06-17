@@ -11,7 +11,20 @@ const useStyles = ({ backgroundColor }) => {
                 backgroundColor: '#f40'
             },
             card: {
-                maxWidth: '35vw'
+                maxWidth: '35vw',
+
+                '& :focus': {
+                    '& .MuiCardActionArea-focusHighlight': {
+                        opacity: 0.8,
+                        border: 4,
+                        borderStyle: 'solid',
+                        borderColor: '#4BE5B0',
+                        background: 'transparent'
+                    }
+                },
+                '& .MuiCardActionArea-root': {
+                    opacity: 1
+                }
             },
             style2: {
                 '& .MuiCardContent-root': {
@@ -32,15 +45,14 @@ const useStyles = ({ backgroundColor }) => {
                 position: 'relative',
                 '& .MuiCardMedia-root': {},
                 '& .MuiCardContent-root': {
-                    backgroundColor: 'rgba(0,0,0,0.6)',
+                    backgroundColor: 'purple',
                     color: 'white',
                     '& p': {
                         color: 'white'
                     }
                 },
                 '& .MuiCardActions-root': {
-                    backgroundColor: '#ccc',
-                    backgroundColor: 'rgba(0,0,0,0.6)',
+                    backgroundColor: 'purple',
                     '& button': {
                         color: 'white'
                     }
@@ -60,6 +72,7 @@ JiscCard.propTypes = {
     altTitle: PropTypes.string,
     exampleText: PropTypes.string,
     buttonText: PropTypes.string,
+    clickable: PropTypes.bool,
     exampleTextType: PropTypes.string,
     cardCategory: PropTypes.string,
     backgroundColor: PropTypes.string,
