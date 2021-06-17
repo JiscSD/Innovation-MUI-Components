@@ -104,10 +104,6 @@ export const CardSelect = () => (
                                 across all continents except Antarctica.
                             </Typography>
                         </CardContent>
-
-                        <CardActions>
-                            <Button size='small'>Learn More</Button>
-                        </CardActions>
                     </CardActionArea>
                 </JiscCard>
             </Grid>
@@ -130,10 +126,6 @@ export const CardSelect = () => (
                                 across all continents except Antarctica.
                             </Typography>
                         </CardContent>
-
-                        <CardActions>
-                            <Button size='small'>Learn More</Button>
-                        </CardActions>
                     </CardActionArea>
                 </JiscCard>
             </Grid>
@@ -156,10 +148,6 @@ export const CardSelect = () => (
                                 across all continents except Antarctica.
                             </Typography>
                         </CardContent>
-
-                        <CardActions>
-                            <Button size='small'>Learn More</Button>
-                        </CardActions>
                     </CardActionArea>
                 </JiscCard>
             </Grid>

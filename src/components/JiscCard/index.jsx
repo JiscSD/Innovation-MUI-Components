@@ -72,7 +72,6 @@ JiscCard.propTypes = {
     altTitle: PropTypes.string,
     exampleText: PropTypes.string,
     buttonText: PropTypes.string,
-    clickable: PropTypes.bool,
     exampleTextType: PropTypes.string,
     cardCategory: PropTypes.string,
     backgroundColor: PropTypes.string,
