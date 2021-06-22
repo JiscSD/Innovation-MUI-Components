@@ -25,7 +25,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 9009 -s public",
-        "build-storybook": "build-storybook -s public",
+        "build-storybook": "mkdir -p public && build-storybook -s public",
         "publish:npm": "rm -rf dist && mkdir dist && node scripts/generateIndex.js && babel src/ -d dist --copy-files && npm publish"
     },
     "eslintConfig": {
