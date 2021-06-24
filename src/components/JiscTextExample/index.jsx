@@ -7,6 +7,7 @@ import jiscTheme from '../../theme.js';
 const useStyles = ({ backgroundImage, backgroundColor }) => {
     return makeStyles((theme) => {
         return {
+            
             button: {
                 backgroundColor: '#f40'
             },
@@ -25,7 +26,22 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
                     position: 'absolute',
                     right: '-80px',
                     bottom: 0
-                }
+                },
+                '& :focus': {
+                    '& .MuiCardActionArea-focusHighlight': {
+                        opacity: 0.8,
+                        border: 4,
+                        borderStyle: 'solid',
+                        borderColor: '#4BE5B0',
+                        background: 'transparent'
+                    }
+                },
+                '& .MuiCardActionArea-root': {
+                    opacity: 1,
+                    position: 'absolute',
+                    left: '0px',
+                    height: '160px'
+                },
             },
             textContainer: {
                 color: 'white',
@@ -103,7 +119,8 @@ const JiscTextExample = ({
     showTwitter,
     showEssay,
     showFilm,
-    showAction
+    showAction,
+    children
 }) => {
     const classes = useStyles({ backgroundColor, backgroundImage, imageHeight })();
 
@@ -176,6 +193,9 @@ const JiscTextExample = ({
                     <Typography className={classes.cardTitle}>{exampleTextType}</Typography>
                 </Container>
             )}
+
+            {children}
+
         </Container>
     );
 };
