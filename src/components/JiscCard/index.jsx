@@ -4,40 +4,35 @@ import { makeStyles, ThemeProvider, Card } from '@material-ui/core';
 
 import jiscTheme from '../../theme.js';
 
-
-
 const useStyles = ({ backgroundColor }) => {
     return makeStyles((theme) => {
         return {
-            root: {
-            },
+            root: {},
             card: {
-                maxWidth: '35vw',
-                },
+                maxWidth: '35vw'
+            },
             style2: {},
             style3: {},
             '@global': {
-
                 // Style 2
                 '[class*="MuiButtonBase"]:focus [class*="MuiCardActionArea-focusHighlight"]': {
                     opacity: '0.8',
-                    border:'4',
+                    border: '4',
                     background: 'transparent',
                     borderColor: '#4BE5B0',
-                    borderStyle: 'solid',
+                    borderStyle: 'solid'
                 },
                 '[class*="style2"]  [class*="MuiCardContent-root"], [class*="style2"] [class*="MuiCardContent-root"] p, [class*="style2"]  [class*="MuiCardActions-root"], [class*="style2"]  [class*="MuiCardActions-root"] button': {
                     backgroundColor: '#37444D',
-                    color: 'white',
+                    color: 'white'
                 },
 
                 // Style 3
                 '[class*="style3"]  [class*="MuiCardContent-root"], [class*="style3"] [class*="MuiCardContent-root"] p, [class*="style3"]  [class*="MuiCardActions-root"], [class*="style3"]  [class*="MuiCardActions-root"] button': {
                     backgroundColor: 'purple',
-                    color: 'white',
-                },
-
-              },
+                    color: 'white'
+                }
+            }
         };
     });
 };
@@ -71,10 +66,10 @@ JiscCard.defaultProps = {
 
 export default (props) => {
     return (
-      <React.Fragment>
-        <ThemeProvider theme={jiscTheme}>
-          <JiscCard {...props} />
-       </ThemeProvider>
-      </React.Fragment>
+        <React.Fragment>
+            <ThemeProvider theme={jiscTheme}>
+                <JiscCard {...props} />
+            </ThemeProvider>
+        </React.Fragment>
     );
-  }
+};
