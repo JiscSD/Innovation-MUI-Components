@@ -4,60 +4,40 @@ import { makeStyles, ThemeProvider, Card } from '@material-ui/core';
 
 import jiscTheme from '../../theme.js';
 
+
+
 const useStyles = ({ backgroundColor }) => {
     return makeStyles((theme) => {
         return {
             root: {
-                backgroundColor: '#f40'
             },
             card: {
                 maxWidth: '35vw',
-
-                '& :focus': {
-                    '& .MuiCardActionArea-focusHighlight': {
-                        opacity: 0.8,
-                        border: 4,
-                        borderStyle: 'solid',
-                        borderColor: '#4BE5B0',
-                        background: 'transparent'
-                    }
                 },
-                '& .MuiCardActionArea-root': {
-                    opacity: 1
-                }
-            },
-            style2: {
-                '& .MuiCardContent-root': {
+            style2: {},
+            style3: {},
+            '@global': {
+
+                // Style 2
+                '[class*="MuiButtonBase"]:focus [class*="MuiCardActionArea-focusHighlight"]': {
+                    opacity: '0.8',
+                    border:'4',
+                    background: 'transparent',
+                    borderColor: '#4BE5B0',
+                    borderStyle: 'solid',
+                },
+                '[class*="style2"]  [class*="MuiCardContent-root"], [class*="style2"] [class*="MuiCardContent-root"] p, [class*="style2"]  [class*="MuiCardActions-root"], [class*="style2"]  [class*="MuiCardActions-root"] button': {
                     backgroundColor: '#37444D',
                     color: 'white',
-                    '& p': {
-                        color: 'white'
-                    }
                 },
-                '& .MuiCardActions-root': {
-                    backgroundColor: '#445560;',
-                    '& button': {
-                        color: 'white'
-                    }
-                }
-            },
-            style3: {
-                position: 'relative',
-                '& .MuiCardMedia-root': {},
-                '& .MuiCardContent-root': {
+
+                // Style 3
+                '[class*="style3"]  [class*="MuiCardContent-root"], [class*="style3"] [class*="MuiCardContent-root"] p, [class*="style3"]  [class*="MuiCardActions-root"], [class*="style3"]  [class*="MuiCardActions-root"] button': {
                     backgroundColor: 'purple',
                     color: 'white',
-                    '& p': {
-                        color: 'white'
-                    }
                 },
-                '& .MuiCardActions-root': {
-                    backgroundColor: 'purple',
-                    '& button': {
-                        color: 'white'
-                    }
-                }
-            }
+
+              },
         };
     });
 };
@@ -91,8 +71,10 @@ JiscCard.defaultProps = {
 
 export default (props) => {
     return (
+      <React.Fragment>
         <ThemeProvider theme={jiscTheme}>
-            <JiscCard {...props} />
-        </ThemeProvider>
+          <JiscCard {...props} />
+       </ThemeProvider>
+      </React.Fragment>
     );
-};
+  }

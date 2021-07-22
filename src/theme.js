@@ -14,8 +14,54 @@ const theme = createMuiTheme({
 		body: {
 		    height: '100%',
 		}
-	    }
+	    },
+    
 	},
+    /*
+    card: {
+        root: {
+        maxWidth: '35vw',
+        height: '1000px'
+        }
+    },
+
+    style2: {
+        root: {
+            MuiCardContent: {
+                root: {
+                    backgroundColor: '#37444D',
+                    color: 'white',
+                    '& p': {
+                        color: 'white'
+                    }
+                }
+            },
+            MuiCardActions: {
+                root: {
+                    backgroundColor: '#445560;',
+                    '& button': {
+                        color: 'white'
+                    }
+                }
+            }
+        }
+    },
+
+    MuiButtonBase: {
+        root: {
+            border: 4,
+            borderStyle: 'solid',
+            borderColor: '#fff',
+            '&:focus': {
+                border: 4,
+            borderStyle: 'solid',
+            borderColor: '#4BE5B0',
+            }
+        },
+      },*/
+
+
+
         MuiLink: {
             root: {
                 '&:active': {
