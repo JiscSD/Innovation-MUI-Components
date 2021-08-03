@@ -27,20 +27,21 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
                     right: '-80px',
                     bottom: 0
                 },
-                '& :focus': {
-                    '& .MuiCardActionArea-focusHighlight': {
+                '@global': {
+                    '[class*="MuiButtonBase-root"]': {
+                        opacity: 1,
+                        width:'100%',
+                        height:'160px',
+                        left:'0px',
+                        position:'absolute'
+                    },
+                    '[class*="MuiButtonBase-root"]:focus [class*="MuiCardActionArea-focusHighlight"]': {
                         opacity: 0.8,
                         border: 4,
                         borderStyle: 'solid',
                         borderColor: '#4BE5B0',
-                        background: 'transparent'
-                    }
-                },
-                '& .MuiCardActionArea-root': {
-                    opacity: 1,
-                    position: 'absolute',
-                    left: '0px',
-                    height: '160px'
+                        background: 'transparent',
+                    },    
                 },
             },
             textContainer: {

@@ -15,10 +15,11 @@ const useStyles = ({ backgroundColor }) => {
             style3: {},
             '@global': {
                 // Style 2
+                
                 '[class*="MuiButtonBase"]:focus [class*="MuiCardActionArea-focusHighlight"]': {
                     opacity: '0.8',
-                    border: '4',
                     background: 'transparent',
+                    border: '4px',
                     borderColor: '#4BE5B0',
                     borderStyle: 'solid'
                 },
