@@ -121,7 +121,7 @@ export const ListStyle3 = () => (
 );
 
 export const ListStyle4 = () => (
-    <JiscList style='style3' headerColor='green' titleColor='purple'>
+    <JiscList style='style4' headerColor='orange' titleColor='purple'>
         <ListSubheader>List Items</ListSubheader>
 
         <ListItem>

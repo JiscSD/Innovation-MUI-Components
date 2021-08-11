@@ -41,33 +41,32 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
                 padding: '20px',
                 '& img': {
                     borderRadius: 10
-                },
-                '& $textContainer': {
-                    paddingTop: 0
                 }
             },
-            version3: {
-                '& $imageContainer': {
+            '@global': {
+                // Style 2
+                '[class*="version2"]  [class*="textContainer"]': {
+                    paddingTop: 10
+                },
+                '[class*="version3"]  [class*="imageContainer"]': {
                     maxWidth: '70%',
                     width: '70%',
                     flexBasis: '70%'
                 },
-                '& $textContainer': {
+                '[class*="version3"]  [class*="textContainer"]': {
                     maxWidth: '30%',
                     width: '24%',
                     padding: '3%',
                     flexBasis: '30%'
-                }
-            },
-            version4: {
-                '& $imageContainer': {
+                },
+                '[class*="version4"]  [class*="imageContainer"]': {
                     maxWidth: '70%',
                     width: '70%',
                     position: 'relative',
                     left: '30%',
                     flexBasis: '70%'
                 },
-                '& $textContainer': {
+                '[class*="version4"]  [class*="textContainer"]': {
                     maxWidth: '30%',
                     width: '24%',
                     position: 'relative',
@@ -75,6 +74,10 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
                     padding: '3%',
                     flexBasis: '30%'
                 }
+             },
+            version3: {
+            },
+            version4: {
             }
         };
     });
