@@ -42,32 +42,37 @@ const useStyles = ({ backgroundImage, backgroundColor }) => {
                 fontWeight: 'bold',
                 fontSize: 15
             },
-            neutral: {
-                borderColor: '#3B88FD',
-                '& $cardAction': {
+            '@global': {
+                // Neutral
+                '[class*="neutral"] [class*="cardAction"]': {
+                    backgroundColor: '#3B88FD',
+                },
+                '[class*="neutral"] [class*="circle"]': {
                     backgroundColor: '#3B88FD'
                 },
-                '& $circle': {
-                    backgroundColor: '#3B88FD'
-                }
+                // Positive
+                '[class*="positive"] [class*="cardAction"]': {
+                    backgroundColor: '#1DD688'
+                },
+                '[class*="positive"] [class*="circle"]': {
+                    backgroundColor: '#1DD688'
+                },
+                // Negative
+                '[class*="negative"] [class*="cardAction"]': {
+                    backgroundColor: '#FE0044'
+                },
+                '[class*="negative"] [class*="circle"]': {
+                    backgroundColor: '#FE0044'
+                },
+            },
+            neutral: {
+                borderColor: '#3B88FD',
             },
             positive: {
                 borderColor: '#1DD688',
-                '& $cardAction': {
-                    backgroundColor: '#1DD688'
-                },
-                '& $circle': {
-                    backgroundColor: '#1DD688'
-                }
             },
             negative: {
                 borderColor: '#FE0044',
-                '& $cardAction': {
-                    backgroundColor: '#FE0044'
-                },
-                '& $circle': {
-                    backgroundColor: '#FE0044'
-                }
             },
             circle: {
                 backgroundColor: '#1DD688',

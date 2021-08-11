@@ -13,65 +13,69 @@ const useStyles = ({ headerColor }) => {
                 margin: 'auto',
                 boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.13)',
                 padding: 0,
-                '& .MuiListSubheader-root': {
-                    backgroundColor: '#37444D',
-                    color: 'white   '
-                }
             },
             fpurple: {
-                '& .MuiListItem-root': {
-                    color: 'purple   '
-                }
             },
             forange: {
-                '& .MuiListItem-root': {
-                    color: 'orange   '
-                }
             },
             fgreen: {
-                '& .MuiListItem-root': {
+            },
+            hpurple: {
+            },
+            horange: {
+            },
+            hgreen: {
+            },
+
+            '@global': {
+                // Customer Colour Headers
+                '[class*="list"] [class*="MuiListSubheader-root"]': {
+                    backgroundColor: '#37444D',
+                    color: 'white   '
+                },
+                '[class*="fpurple"] [class*="MuiListItem-root"]': {
+                    color: 'purple   '
+                },
+                '[class*="forange"] [class*="MuiListItem-root"]': {
+                    color: 'orange   '
+                },
+                '[class*="fgreen"] [class*="MuiListItem-root"]': {
                     color: 'green   '
-                }
-            },
-            orange: {
-                '& .MuiListSubheader-root': {
+                },
+                // Customer Colour Text
+                '[class*="horange"] [class*="MuiListSubheader-root"]': {
                     backgroundColor: 'orange'
-                }
-            },
-            green: {
-                '& .MuiListSubheader-root': {
+                },
+                '[class*="hgreen"] [class*="MuiListSubheader-root"]': {
                     backgroundColor: 'green'
-                }
-            },
-            purple: {
-                '& .MuiListSubheader-root': {
+                },
+                '[class*="hpurple"] [class*="MuiListSubheader-root"]': {
                     backgroundColor: 'purple'
-                }
+                },
+                //Style 2
+                '[class*="style2"] [class*="MuiListItem-root"]': {
+                    borderBottomStyle: 'solid',
+                    borderWidth: 1,
+                    borderColor: '#ccc'
+                },
+                //Style 3
+                '[class*="style3"] [class*="MuiListItem-root"]:nth-of-type(odd)': {
+                    backgroundColor: '#EBF1F2'
+                },
+                //Style 4
+                '[class*="style4"] [class*="MuiListItem-root"]:nth-of-type(odd)': {
+                    backgroundColor: '#EBF1F2'
+                },
             },
             listText: {
                 paddingTop: '3px',
                 paddingBottom: '3px'
             },
             style2: {
-                '& .MuiListItem-root': {
-                    borderBottomStyle: 'solid',
-                    borderWidth: 1,
-                    borderColor: '#ccc'
-                }
             },
             style3: {
-                '& .MuiListItem-root': {
-                    '&:nth-of-type(odd)': {
-                        backgroundColor: '#EBF1F2'
-                    }
-                }
             },
             style4: {
-                '& .MuiListItem-root': {
-                    '&:nth-of-type(odd)': {
-                        backgroundColor: '#EBF1F2'
-                    }
-                }
             }
         };
     });
@@ -95,7 +99,7 @@ const JiscList = ({
                 classes.list,
                 classes[`${'f' + titleColor}`],
                 classes[`${style}`],
-                classes[`${headerColor}`]
+                classes[`${'h' + headerColor}`]
             ].join(' ')}
         >
             {children}
